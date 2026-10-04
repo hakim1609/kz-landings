@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Ademy-ai — свадебные и национальные платья в Алматы, с 2004 года</title>
+<meta name="description" content="Свадебный салон Ademy-ai: продажа, первичный прокат и опт свадебных и национальных платьев. 500 м², два зала на Северном Кольце в Алматы. С 2004 года.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400&family=Commissioner:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/05-hd.webp">
+<script type="application/ld+json">
+[{"@context":"https://schema.org","@type":"ClothingStore","name":"Ademy-ai, свадебный салон","image":"img/05-hd.webp","telephone":"+77788888160","email":"omarovassel@gmail.com","url":"https://instagram.com/ademy_ai","sameAs":["https://instagram.com/ademy_ai","https://www.tiktok.com/@ademy_ai","https://2gis.kz/almaty/firm/70000001035152532"],"address":{"@type":"PostalAddress","streetAddress":"шоссе Северное Кольцо, 7 (бутики 2, 22, 11, 9; ряды 2-3-5-6)","addressLocality":"Алматы","addressCountry":"KZ"},"geo":{"@type":"GeoCoordinates","latitude":43.283349,"longitude":76.890539},"openingHours":"Tu-Su 09:00-17:45","paymentAccepted":"Наличные, банковский перевод, перевод с карты, QR-код","aggregateRating":{"@type":"AggregateRating","ratingValue":"5","reviewCount":"169","bestRating":"5"}},
+{"@context":"https://schema.org","@type":"ClothingStore","name":"Ademy-ai Adem, свадебный салон","image":"img/06.webp","telephone":"+77788888190","address":{"@type":"PostalAddress","streetAddress":"шоссе Северное Кольцо, 3/2, 3 этаж, бутик 55","addressLocality":"Алматы","addressCountry":"KZ"},"geo":{"@type":"GeoCoordinates","latitude":43.278731,"longitude":76.888044},"openingHours":"Tu-Su 09:00-18:00","paymentAccepted":"Карта, наличные, банковский перевод, перевод с карты","aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","reviewCount":"41","bestRating":"5"}}]
+</script>
+<style>
+:root{
+  --plaster:#E7E4DF; --paper:#F5F3EF; --graphite:#23201F; --stone:#6F6A65; --rule:#CCC6BE;
+  --velvet:#7A1620; --velvet-deep:#3F0B11; --gold:#B8924F; --gold-soft:#D9BE8A;
+  --head:"Unbounded", "Arial", sans-serif; --text:"Commissioner", system-ui, sans-serif;
+  --pad:clamp(20px, 4vw, 56px);
+  --colw:clamp(240px, 24vw, 380px);
+  /* stage-2 height of the walkthrough frame */
+  --h2:min(86vh, calc((100vw - 2 * var(--colw) - 2 * var(--pad) - 48px) * 1.333));
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--plaster);color:var(--graphite);font:400 17px/1.62 var(--text);overflow-x:hidden}
+img,video{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1360px;margin:0 auto;padding:0 var(--pad)}
+h1,h2,h3{font-family:var(--head);font-weight:300;letter-spacing:-.01em}
+h2{font-size:clamp(28px,3.1vw,46px);line-height:1.12;max-width:20ch}
+.lede{color:var(--stone);max-width:52ch}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;font:500 15px/1.2 var(--text);text-decoration:none;border:1px solid currentColor;transition:background .25s,color .25s,border-color .25s;text-align:center}
+.btn-solid{background:var(--velvet);border-color:var(--velvet);color:#fff}
+.btn-solid:hover{background:var(--velvet-deep);border-color:var(--velvet-deep)}
+.btn-line{background:transparent}
+.btn-line:hover{background:var(--graphite);color:var(--paper);border-color:var(--graphite)}
+.link{text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.link:hover{color:var(--velvet)}
+
+/* header */
+.top{position:fixed;inset:0 0 auto 0;z-index:40;color:var(--plaster);transition:background .35s,color .35s,border-color .35s;border-bottom:1px solid transparent}
+.top .bar{display:flex;align-items:center;justify-content:space-between;height:70px;gap:24px}
+.logo{font:400 17px/1 var(--head);letter-spacing:.12em;text-decoration:none;white-space:nowrap}
+.top nav{display:flex;gap:26px;font-size:15px}
+.top nav a{text-decoration:none;opacity:.78}
+.top nav a:hover{opacity:1}
+.top .btn{min-height:42px;padding:0 18px;font-size:14px}
+.top.on-light{color:var(--graphite)}
+.top.solid{background:rgb(231 228 223 / .94);backdrop-filter:blur(8px);color:var(--graphite);border-color:var(--rule)}
+
+/* ============ HERO: walkthrough ============ */
+.walk{position:relative}
+.stage{position:relative;height:100vh;min-height:620px;overflow:hidden;background:var(--graphite);color:var(--plaster)}
+.lens{position:absolute;left:50%;top:50%;height:var(--h2);aspect-ratio:1600/2132;margin:calc(var(--h2) * -.5) 0 0 calc(var(--h2) * -.37523);transform-origin:50% 50%;background:#4a4745}
+.lens img{width:100%;height:100%;object-fit:cover}
+.lens::after{content:"";position:absolute;inset:-1px;border:1px solid var(--gold);opacity:var(--edge,0)}
+.scrim{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,rgb(35 32 31 / .86),rgb(35 32 31 / .35) 38%,rgb(35 32 31 / 0) 55%),linear-gradient(0deg,rgb(35 32 31 / .75),rgb(35 32 31 / 0) 32%),linear-gradient(180deg,rgb(35 32 31 / .7),rgb(35 32 31 / 0) 16%);opacity:0}
+.walk-copy{position:absolute;left:var(--pad);top:30vh;width:var(--colw)}
+.since{font-size:14px;color:var(--gold-soft);margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.since::before{content:"";width:30px;height:1px;background:currentColor}
+.walk h1{font-size:clamp(28px,2.65vw,42px);line-height:1.14}
+.walk-side{position:absolute;right:var(--pad);bottom:21vh;width:var(--colw)}
+.walk-side p{color:#CFC9C1;margin-bottom:22px;font-size:16px}
+.walk-side .row{display:flex;flex-direction:column;gap:10px}
+.walk-side .btn-line{color:var(--plaster)}
+.walk-side .btn-line:hover{background:var(--plaster);color:var(--graphite);border-color:var(--plaster)}
+.stars{display:flex;flex-direction:column;gap:2px;margin-top:20px;font-size:14px;color:#B9B2A9}
+.stars b{color:var(--plaster);font-weight:500}
+.meter{position:absolute;right:var(--pad);bottom:5vh;display:flex;gap:clamp(24px,3vw,48px);text-align:right}
+.meter b{display:block;font:300 clamp(30px,3vw,46px)/1 var(--head);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
+.meter > div > span{font-size:13px;opacity:.7}
+.cue{position:absolute;left:var(--pad);bottom:5vh;font-size:13px;opacity:.7;display:flex;align-items:center;gap:10px}
+.cue::after{content:"";width:1px;height:34px;background:currentColor;animation:cue 2.2s ease-in-out infinite;transform-origin:top}
+@keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1)}100%{transform:scaleY(1);opacity:0}}
+/* hall dressing — only built with JS on desktop */
+.hall-set{display:none}
+.hall-copy{display:none}
+
+/* ============ WAYS ============ */
+section{padding:clamp(72px,9vw,128px) 0}
+.ways{background:var(--paper)}
+.ways .head{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:end;margin-bottom:56px}
+.legend{border-top:1px solid var(--graphite)}
+.legend > div{display:grid;grid-template-columns:minmax(240px,1fr) 2fr auto;gap:28px;align-items:baseline;padding:28px 0;border-bottom:1px solid var(--rule)}
+.legend h3{font-size:clamp(20px,1.9vw,27px);line-height:1.15}
+.legend p{color:var(--stone);max-width:56ch}
+.legend a{font-size:15px;white-space:nowrap}
+
+/* ============ RAILS ============ */
+.coll{overflow:hidden}
+.coll .intro{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:start;margin-bottom:clamp(40px,5vw,72px)}
+.facts{list-style:none;border-top:1px solid currentColor;margin-bottom:28px}
+.facts li{display:grid;grid-template-columns:130px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--rule);font-size:15px}
+.facts li span:first-child{color:var(--stone)}
+.coll .lede{margin-top:20px}
+.national{background:var(--velvet-deep);color:#F3E9E2}
+.national .lede,.national .facts li span:first-child{color:#CDB3AE}
+.national .facts{border-color:var(--gold-soft)}
+.national .facts li{border-color:rgb(217 190 138 / .25)}
+.national .btn-solid{background:var(--gold);border-color:var(--gold);color:var(--velvet-deep)}
+.national .btn-solid:hover{background:var(--gold-soft);border-color:var(--gold-soft)}
+.rail{padding:0 var(--pad)}
+.track{display:flex;gap:clamp(18px,2.6vw,40px);width:max-content;align-items:flex-start}
+.piece{flex:none;width:clamp(240px,27vw,400px);text-decoration:none;display:block}
+.piece:nth-child(even){margin-top:clamp(20px,5vh,60px)}
+.piece .ph{overflow:hidden;aspect-ratio:3/4;background:#d5d0c9}
+.piece img,.piece video{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.plate{display:inline-block;margin-top:14px;padding:9px 14px 10px;border:1px solid var(--gold);background:var(--paper);color:var(--graphite);font-size:13px;line-height:1.35;transform-origin:50% 0;max-width:100%}
+.plate b{display:block;font:400 13px/1.3 var(--head);margin-bottom:2px}
+.national .plate{background:#2c0810;color:#EBDDD4;border-color:var(--gold-soft)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:-6px 0 26px}
+.chips a{font-size:14px;padding:6px 14px;border:1px solid var(--rule);text-decoration:none;background:var(--paper)}
+.chips a:hover{border-color:var(--graphite)}
+.m-only{display:none}
+
+/* ============ BRIDES ============ */
+.brides{background:var(--paper)}
+.brides .grid{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:clamp(16px,2vw,28px);margin-top:48px;align-items:end}
+.bride a{display:block;text-decoration:none;overflow:hidden}
+.bride img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%}
+.bride:first-child img{aspect-ratio:4/5.6}
+.bride p{font-size:14px;color:var(--stone);margin-top:12px;max-width:36ch}
+.bride p b{display:block;color:var(--graphite);font-weight:500;font-size:15px}
+.perk{margin-top:56px;display:grid;grid-template-columns:auto 1fr auto;gap:28px;align-items:center;border-top:1px solid var(--graphite);border-bottom:1px solid var(--graphite);padding:26px 0}
+.perk strong{font:300 52px/1 var(--head);color:var(--velvet)}
+.perk p span{color:var(--stone);display:block;font-size:15px}
+
+/* ============ HALLS: plan ============ */
+.halls{background:var(--plaster)}
+@media (min-width:900px){.halls{padding:96px 0 40px;min-height:100vh;display:flex;align-items:center}.halls > .wrap{width:100%}}
+.halls .scene{display:grid;grid-template-columns:minmax(300px,1fr) 1fr 1fr;gap:clamp(20px,2.6vw,40px);align-items:center}
+.halls .side h2{font-size:clamp(26px,2.5vw,38px)}
+.halls .side h2{margin-bottom:14px}
+.halls .side .lede{font-size:16px;margin-bottom:22px}
+.plan{margin:0}
+.plan svg{width:100%;height:auto;display:block;max-height:46vh}
+.plan figcaption{font-size:13px;color:var(--stone);margin-top:8px}
+.plan .grid-l{stroke:#D3CDC5;stroke-width:1;fill:none}
+.plan .sheet{stroke:var(--graphite);stroke-width:1.2;fill:none}
+.slot{display:flex;align-self:center;position:relative;z-index:1}
+.slot[data-from="a1"]{z-index:2}
+.hall{background:var(--paper);border-top:3px solid var(--graphite);padding:30px 28px;display:flex;flex-direction:column;width:100%;transform-origin:50% 50%}
+.hall .mark{display:inline-flex;width:36px;height:36px;align-items:center;justify-content:center;border:1px solid var(--graphite);border-radius:50%;font:400 15px/1 var(--head);margin-bottom:20px}
+.hall h3{font-size:24px;line-height:1.2;margin-bottom:6px}
+.hall .addr{color:var(--stone);margin-bottom:18px}
+.rating{font:300 24px/1 var(--head)}
+.rating small{font:400 14px var(--text);color:var(--stone);margin-left:8px}
+.hall dl{display:grid;grid-template-columns:96px 1fr;gap:10px 14px;font-size:15px;border-top:1px solid var(--rule);padding-top:16px;margin:18px 0 26px}
+.hall dt{color:var(--stone)}
+.hall .acts{margin-top:auto;display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center}
+
+/* b2b / final */
+.b2b{padding:0 0 clamp(56px,6vw,84px);background:var(--plaster)}
+.b2b .box{display:grid;grid-template-columns:1fr 1.3fr auto;gap:36px;align-items:center;border-top:1px solid var(--graphite);border-bottom:1px solid var(--graphite);padding:34px 0}
+.b2b h2{font-size:clamp(22px,2.2vw,32px)}
+.b2b p{color:var(--stone);max-width:54ch;font-size:16px}
+.final{background:var(--velvet);color:#fff;padding:clamp(80px,10vw,140px) 0}
+.final .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:end}
+.final h2{max-width:16ch}
+.final p{color:#EBCFCB;margin-top:16px;max-width:44ch}
+.final .row{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
+.final .btn-solid{background:#fff;border-color:#fff;color:var(--velvet)}
+.final .btn-solid:hover{background:var(--plaster)}
+.final .btn-line:hover{background:#fff;color:var(--velvet);border-color:#fff}
+footer{background:var(--velvet-deep);color:#CDB3AE;font-size:14px;padding:28px 0}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 30px}
+.sticky-cta{display:none}
+
+/* ===== desktop scene dressing (JS only) ===== */
+@media (min-width:900px){
+  html.js .hall-set{display:block;position:absolute;inset:0;pointer-events:none}
+  .railline{position:absolute;left:0;right:0;top:calc(50vh - var(--h2) * .28 - 5vh);height:1px;background:var(--stone);transform-origin:50% 50%}
+  .floor{position:absolute;left:var(--pad);right:var(--pad);top:calc(50vh + var(--h2) * .28 + 62px);height:1px;background:var(--graphite);transform-origin:0 50%}
+  .floor::before,.floor::after{content:"";position:absolute;top:-6px;width:1px;height:13px;background:var(--graphite)}
+  .floor::before{left:0}.floor::after{right:0}
+  .wf{position:absolute;top:calc(50vh - var(--h2) * .28);margin:0}
+  .wf .ph{overflow:hidden;width:100%;height:100%;background:#cfc9c1}
+  .wf img,.wf video{width:100%;height:100%;object-fit:cover;object-position:50% 16%}
+  .wf .wire,.cwire{position:absolute;left:50%;bottom:100%;width:1px;height:5vh;background:var(--stone);transform-origin:50% 0}
+  .wf figcaption,.cplate{position:absolute;top:calc(100% + 10px);left:0;font-size:12px;line-height:1.3;color:var(--stone);white-space:nowrap}
+  .wf figcaption b,.cplate b{display:block;font:400 12px/1.3 var(--head);color:var(--graphite)}
+  .l1{right:calc(50% + var(--h2) * .28);height:calc(var(--h2) * .5);aspect-ratio:9/16}
+  .l2{right:calc(50% + var(--h2) * .6135);height:calc(var(--h2) * .36);aspect-ratio:3/4}
+  .r1{left:calc(50% + var(--h2) * .28);height:calc(var(--h2) * .44);aspect-ratio:3/4}
+  .r2{left:calc(50% + var(--h2) * .66);height:calc(var(--h2) * .36);aspect-ratio:3/4}
+  .cslot{position:absolute;left:50%;top:calc(50vh - var(--h2) * .28);width:calc(var(--h2) * .4203);height:calc(var(--h2) * .56);translate:-50% 0}
+  html.js .hall-copy{display:block;position:absolute;left:var(--pad);bottom:5vh;max-width:min(56vw,640px);font:300 clamp(17px,1.5vw,22px)/1.35 var(--head);color:var(--graphite)}
+  html.js .hall-copy small{display:block;font:400 14px/1.4 var(--text);color:var(--stone);margin-top:8px}
+}
+
+@media (max-width:1180px){
+  .top nav{display:none}
+}
+@media (max-width:899px){
+  body{font-size:16px}
+  .top{color:var(--graphite);background:rgb(231 228 223 / .95);border-color:var(--rule)}
+  .top .bar{height:58px}
+  .top .bar .btn{display:none}
+  .stage{height:auto;min-height:0;padding:74px 0 36px}
+  .lens{position:relative;left:auto;top:auto;height:auto;width:calc(100% - 2 * var(--pad));margin:0 auto;overflow:hidden}
+  .lens img{transform-origin:48% 58%}
+  .scrim{display:none}
+  .walk-copy,.walk-side,.meter,.cue{position:static;width:auto;padding:0 var(--pad)}
+  .walk-copy{margin-top:26px}
+  .walk h1{font-size:clamp(26px,7.4vw,34px)}
+  .walk-side{margin-top:18px}
+  .meter{justify-content:flex-start;text-align:left;margin-top:28px;padding-top:20px;border-top:1px solid rgb(231 228 223 / .2);margin-left:var(--pad);margin-right:var(--pad);padding-left:0}
+  .cue{display:none}
+  .ways .head,.coll .intro{grid-template-columns:1fr;gap:16px;margin-bottom:34px}
+  .legend > div{grid-template-columns:1fr;gap:8px;padding:22px 0}
+  .facts li{grid-template-columns:110px 1fr;font-size:14px}
+  .rail{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:10px;scrollbar-width:none}
+  .rail::-webkit-scrollbar{display:none}
+  .track{padding-right:var(--pad)}
+  .piece{width:72vw;scroll-snap-align:start}
+  .piece:nth-child(even){margin-top:0}
+  .m-only{display:block}
+  .brides .grid{grid-template-columns:1fr 1fr}
+  .brides .grid .bride:first-child{grid-column:1/-1}
+  .bride:first-child img{aspect-ratio:4/4.4;object-position:50% 12%}
+  .perk{grid-template-columns:1fr;gap:12px}
+  .perk strong{font-size:42px}
+  .halls .scene{grid-template-columns:1fr}
+  .plan svg{max-height:none}
+  .hall{padding:26px 20px}
+  .hall dl{grid-template-columns:90px 1fr}
+  .b2b .box{grid-template-columns:1fr;gap:20px}
+  .final .wrap{grid-template-columns:1fr}
+  .final .row{justify-content:flex-start}
+  .final .row .btn{flex:1 1 100%}
+  footer{padding-bottom:96px}
+  .sticky-cta{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:30;box-shadow:0 0 0 1px rgb(255 255 255 / .55),0 10px 28px rgb(63 11 17 / .35);transition:opacity .3s,transform .3s}
+  .sticky-cta.away{opacity:0;transform:translateY(20px);pointer-events:none}
+}
+@media (max-width:420px){
+  .meter b{font-size:30px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<header class="top" id="hdr">
+  <div class="wrap bar">
+    <a class="logo" href="#top" aria-label="Ademy-ai — наверх">ADEMY AI</a>
+    <nav aria-label="Разделы">
+      <a href="#ways">Продажа и прокат</a>
+      <a href="#national">Национальные</a>
+      <a href="#white">Свадебные</a>
+      <a href="#brides">Невесты</a>
+      <a href="#halls">Два зала</a>
+      <a href="#b2b">Оптом</a>
+    </nav>
+    <a class="btn btn-solid wa" data-phone="77788888160" data-salon="зал на Северном Кольце, 7" href="https://wa.me/77788888160">Записаться на примерку</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO: «Проход по 500 м²» -->
+  <section class="walk" aria-labelledby="hero-title" style="padding:0">
+    <div class="stage" id="stage">
+      <div class="hall-set" aria-hidden="true">
+        <div class="railline"></div>
+        <figure class="wf l2"><span class="wire"></span><div class="ph"><img src="img/04.webp" width="1100" height="1467" alt="" loading="lazy"></div><figcaption><b>Imperial Velvet</b>бархат, золотая вышивка</figcaption></figure>
+        <figure class="wf l1"><span class="wire"></span><div class="ph"><video class="hv" muted loop playsinline preload="metadata" poster="video/mikado-poster.jpg"><source src="video/mikado.webm" type="video/webm"><source src="video/mikado.mp4" type="video/mp4"></video></div><figcaption><b>Mikado</b>съёмное болеро, «рыбка»</figcaption></figure>
+        <div class="cslot"><span class="cwire"></span><div class="cplate"><b>Mermaid</b>халтер, кружево целиком</div></div>
+        <figure class="wf r1"><span class="wire"></span><div class="ph"><img src="img/08.webp" width="1100" height="1951" alt="" loading="lazy"></div><figcaption><b>Кружево и болеро</b>с болеро закрыто, без — смелее</figcaption></figure>
+        <figure class="wf r2"><span class="wire"></span><div class="ph"><img src="img/09.webp" width="1100" height="1951" alt="" loading="lazy"></div><figcaption><b>Ручная вышивка</b>для ұзату и құдалық</figcaption></figure>
+        <div class="floor"></div>
+      </div>
+
+      <figure class="lens" id="lens">
+        <img src="img/05-hd.webp" width="1600" height="2132" alt="Кружевное свадебное платье силуэта mermaid с воротником-халтер и фатой" fetchpriority="high">
+      </figure>
+      <div class="scrim" aria-hidden="true"></div>
+
+      <div class="walk-copy">
+        <div class="since">Продажа, прокат и опт с 2004 года</div>
+        <h1 id="hero-title">Свадебные и национальные платья в&nbsp;Алматы</h1>
+      </div>
+      <div class="walk-side" id="hero-cta">
+        <p>500&nbsp;м² пространства, где каждая находит свой образ. Первичный прокат, премиальные коллекции и индивидуальный подбор.</p>
+        <div class="row">
+          <a class="btn btn-solid wa" data-phone="77788888160" data-salon="зал на Северном Кольце, 7" href="https://wa.me/77788888160">Записаться на примерку</a>
+          <a class="btn btn-line" href="#halls">Выбрать зал</a>
+        </div>
+        <div class="stars"><span><b>5,0</b> в 2ГИС, 169 отзывов</span><span><b>4,9</b> в 2ГИС, 41 отзыв</span></div>
+      </div>
+
+      <div class="hall-copy" aria-hidden="true">Два зала на Северном Кольце<small>500 м² — белые свадебные и казахские национальные платья в одном месте</small></div>
+      <div class="cue" aria-hidden="true">Листайте — отходим от кружева к залу</div>
+      <div class="meter" aria-label="С 2004 года, 500 квадратных метров">
+        <div><b id="cYear">2026</b><span>работаем с 2004 года</span></div>
+        <div><b><span id="cArea">500</span>&nbsp;м²</b><span>два зала</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAYS -->
+  <section class="ways" id="ways" aria-labelledby="ways-title">
+    <div class="wrap">
+      <div class="head">
+        <h2 id="ways-title" data-lines>Купить, взять в прокат или заказать оптом</h2>
+        <p class="lede">Ассортимент премиум-класса в одном месте: белые свадебные платья и казахские национальные образы для ұзату и құдалық.</p>
+      </div>
+      <div class="legend" data-rows>
+        <div><h3>Продажа</h3><p>Платье остаётся с вами. Премиальные коллекции — кружево, микадо, бархат с ручной вышивкой.</p><a class="link wa" data-phone="77788888160" data-salon="покупка платья" href="https://wa.me/77788888160">Спросить о покупке</a></div>
+        <div><h3>Первичный прокат</h3><p>Платье, которое до вас никто не надевал. Тот же уровень, что в продаже, — на ваш день.</p><a class="link wa" data-phone="77788888160" data-salon="первичный прокат" href="https://wa.me/77788888160">Спросить о прокате</a></div>
+        <div><h3>Подбор образа</h3><p>Экспертный индивидуальный подбор: силуэт, ткань, болеро и трансформеры — образ собирают под вас.</p><a class="link" href="#halls">Прийти на примерку</a></div>
+        <div><h3>Оптом</h3><p>Поставки для салонов и магазинов — отдельный разговор с салоном.</p><a class="link" href="#b2b">Условия для салонов</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NATIONAL rail -->
+  <section class="coll national" id="national" aria-labelledby="nat-title">
+    <div class="wrap intro">
+      <div>
+        <h2 id="nat-title" data-lines>Национальные образы для ұзату и құдалық</h2>
+        <p class="lede">Глубокий благородный оттенок, мягкий бархат и ручная золотая вышивка, подчёркивающая силуэт. Казахская эстетика — величественно и женственно.</p>
+      </div>
+      <div>
+        <ul class="facts">
+          <li><span>Ткань</span><span>Imperial Velvet — бархат с мягким блеском</span></li>
+          <li><span>Отделка</span><span>Ручная золотая вышивка, национальные орнаменты</span></li>
+          <li><span>Для чего</span><span>Ұзату, құдалық, свадьба</span></li>
+        </ul>
+        <a class="btn btn-solid wa" data-phone="77788888160" data-salon="национальный образ, зал на Северном Кольце, 7" href="https://wa.me/77788888160">Примерить национальный образ</a>
+      </div>
+    </div>
+    <div class="rail" data-dir="-1">
+      <div class="track">
+        <a class="piece" href="https://www.instagram.com/reel/DeDeQp8ChLS/" target="_blank" rel="noopener"><div class="ph"><img src="img/01.webp" width="1100" height="1955" loading="lazy" alt="Красное платье с национальными орнаментами и широкими рукавами на террасе в горах"></div><div class="plate"><b>Imperial Velvet</b>широкие рукава, орнаменты</div></a>
+        <a class="piece" href="https://www.instagram.com/p/DdraiYJjFNG/" target="_blank" rel="noopener"><div class="ph"><img src="img/04.webp" width="1100" height="1467" loading="lazy" alt="Невеста в красном бархатном национальном платье с саукеле на фоне гор"></div><div class="plate"><b>Бархат и саукеле</b>золотая вышивка</div></a>
+        <a class="piece" href="https://www.instagram.com/reel/DdNdc6eiDpP/" target="_blank" rel="noopener"><div class="ph"><img src="img/09.webp" width="1100" height="1951" loading="lazy" alt="Невеста в бордовом бархатном платье с золотой вышивкой"></div><div class="plate"><b>Ручная вышивка</b>глубокий благородный оттенок</div></a>
+        <a class="piece" href="https://www.instagram.com/p/DdEvUmDjPh3/" target="_blank" rel="noopener"><div class="ph"><img src="img/12.webp" width="1100" height="1466" loading="lazy" alt="Национальный образ из красного бархата на террасе в горах"></div><div class="plate"><b>Красный бархат</b>мягкий блеск ткани</div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHITE rail -->
+  <section class="coll white" id="white" aria-labelledby="white-title">
+    <div class="wrap intro">
+      <div>
+        <h2 id="white-title" data-lines>Белые платья: кружево, микадо, шлейф</h2>
+        <p class="lede">Нежное кружево, идеальная посадка и шлейф, который красиво раскрывается в движении. Болеро добавляет закрытости — без него платье становится смелее.</p>
+      </div>
+      <div>
+        <ul class="facts">
+          <li><span>Силуэты</span><span>А-силуэт, mermaid, «рыбка»</span></li>
+          <li><span>Ткани</span><span>Кружево, премиальный микадо</span></li>
+          <li><span>Детали</span><span>Съёмные болеро, трансформеры, корсеты</span></li>
+        </ul>
+        <div class="chips" aria-label="Подборки в Instagram">
+          <a href="https://instagram.com/ademy_ai" target="_blank" rel="noopener">Rich size</a>
+          <a href="https://instagram.com/ademy_ai" target="_blank" rel="noopener">Кружева</a>
+          <a href="https://instagram.com/ademy_ai" target="_blank" rel="noopener">Sale</a>
+        </div>
+        <a class="btn btn-solid wa" data-phone="77788888160" data-salon="свадебное платье, зал на Северном Кольце, 7" href="https://wa.me/77788888160">Записаться на примерку</a>
+      </div>
+    </div>
+    <div class="rail" data-dir="1">
+      <div class="track">
+        <a class="piece m-only" href="https://www.instagram.com/reel/DeAAV5pMVIQ/" target="_blank" rel="noopener"><div class="ph"><video class="mv" muted loop playsinline preload="none" poster="video/mikado-poster.jpg" aria-label="Видео: платье из микадо с кружевным болеро"><source src="video/mikado.webm" type="video/webm"><source src="video/mikado.mp4" type="video/mp4"></video></div><div class="plate"><b>Mikado в движении</b>болеро и трансформер</div></a>
+        <a class="piece" href="https://www.instagram.com/reel/DeAAV5pMVIQ/" target="_blank" rel="noopener"><div class="ph"><img src="img/02.webp" width="1100" height="1951" loading="lazy" alt="Невеста в платье из микадо с кружевным болеро на террасе в горах"></div><div class="plate"><b>Mikado</b>съёмное кружевное болеро</div></a>
+        <a class="piece" href="https://www.instagram.com/p/DdrGu7wDOJL/" target="_blank" rel="noopener"><div class="ph"><img src="img/05.webp" width="1100" height="1466" loading="lazy" alt="Кружевное свадебное платье силуэта mermaid"></div><div class="plate"><b>Mermaid</b>халтер, кружево целиком</div></a>
+        <a class="piece" href="https://www.instagram.com/p/DdkRv3JDF0q/" target="_blank" rel="noopener"><div class="ph"><img src="img/06.webp" width="1100" height="1467" loading="lazy" alt="Кружевное платье с длинным шлейфом в банкетном зале"></div><div class="plate"><b>Кружево и шлейф</b>раскрывается в движении</div></a>
+        <a class="piece" href="https://www.instagram.com/p/DdaiQQyjDBO/" target="_blank" rel="noopener"><div class="ph"><img src="img/07.webp" width="1100" height="1324" loading="lazy" alt="Платье А-силуэта с корсетом и шлейфом в светлом интерьере"></div><div class="plate"><b>А-силуэт</b>корсет и воздушное кружево</div></a>
+        <a class="piece" href="https://www.instagram.com/reel/DdR4xvdsnA_/" target="_blank" rel="noopener"><div class="ph"><img src="img/08.webp" width="1100" height="1951" loading="lazy" alt="Невеста в кружевном платье с болеро в зале с люстрами"></div><div class="plate"><b>Болеро</b>с ним закрыто, без — смелее</div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRIDES -->
+  <section class="brides" id="brides" aria-labelledby="brides-title">
+    <div class="wrap">
+      <h2 id="brides-title" data-lines>В платьях Ademy-ai</h2>
+      <p class="lede" style="margin-top:16px">Образы, которые собирали вместе с партнёрами — Zhauhar Beauty Studio.</p>
+      <div class="grid">
+        <div class="bride"><a href="https://www.instagram.com/reel/DdypOukImai/" target="_blank" rel="noopener"><img src="img/03.webp" width="1100" height="1954" loading="lazy" alt="Финалистка конкурса «Қазақ аруы 2026» в белом образе со шляпой и перчатками"></a><p><b>Қазақ аруы 2026</b>Финалистка конкурса в платье Ademy-ai</p></div>
+        <div class="bride"><a href="https://www.instagram.com/reel/DdMI7FAIPc_/" target="_blank" rel="noopener"><img src="img/10.webp" width="1100" height="1954" loading="lazy" alt="Невеста в кружевном платье и фате"></a><p><b>Қалыңдық көйлегі</b>«Ең әдемі күнге — ең ерекше образ»</p></div>
+        <div class="bride"><a href="https://www.instagram.com/reel/DdJiEh7MBAm/" target="_blank" rel="noopener"><img src="img/11.webp" width="1100" height="1951" loading="lazy" alt="Невеста в красном ұзату көйлегі с золотой вышивкой"></a><p><b>Ұзату көйлегі</b>«Нәзік, сәнді әрі ерекше образ»</p></div>
+      </div>
+      <div class="perk">
+        <strong>−15%</strong>
+        <p>на макияж и причёску в Zhauhar Beauty Studio для клиентов Ademy-ai<span>Партнёрское предложение из публикаций салона — уточните при записи.</span></p>
+        <a class="link" href="https://instagram.com/zhauhar_beauty_studio" target="_blank" rel="noopener">@zhauhar_beauty_studio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HALLS: plan drawn on scroll -->
+  <section class="halls" id="halls" aria-labelledby="halls-title">
+    <div class="wrap scene" id="planScene">
+      <div class="side">
+        <h2 id="halls-title">Два зала на Северном Кольце</h2>
+        <p class="lede">Оба работают со вторника по воскресенье, понедельник — выходной. Напишите в WhatsApp нужного зала: ответят и назначат время примерки.</p>
+        <figure class="plan">
+          <svg viewBox="0 0 360 440" role="img" aria-labelledby="plan-t">
+            <title id="plan-t">Схема: взаимное расположение двух залов, около 550 метров по прямой</title>
+            <g class="grid-l">
+              <path d="M48 8V432"/><path d="M88 8V432"/><path d="M128 8V432"/><path d="M168 8V432"/><path d="M208 8V432"/><path d="M248 8V432"/><path d="M288 8V432"/><path d="M328 8V432"/>
+              <path d="M8 48H352"/><path d="M8 88H352"/><path d="M8 128H352"/><path d="M8 168H352"/><path d="M8 208H352"/><path d="M8 248H352"/><path d="M8 288H352"/><path d="M8 328H352"/><path d="M8 368H352"/><path d="M8 408H352"/>
+            </g>
+            <path class="sheet" d="M8 8H352V432H8Z"/>
+            <g class="north" transform="translate(316 44)"><path d="M0 -22 L7 4 L0 -2 L-7 4Z" fill="none" stroke="#23201F" stroke-width="1.2"/><text y="22" text-anchor="middle" font-family="Commissioner, sans-serif" font-size="14" fill="#23201F">С</text></g>
+            <path class="link-l" d="M112 372L238 60" stroke="#7A1620" stroke-width="1.5" fill="none"/>
+            <g class="dist" transform="translate(175 216) rotate(-68)"><rect x="-44" y="-12" width="88" height="22" fill="#E7E4DF"/><text text-anchor="middle" y="4" font-family="Commissioner, sans-serif" font-size="15" fill="#6F6A65">≈ 550 м</text></g>
+            <circle class="anchor a1" cx="238" cy="60" r="17" fill="none"/>
+            <circle class="anchor a2" cx="112" cy="372" r="17" fill="none"/>
+            <g class="pin p1"><circle cx="238" cy="60" r="17" fill="#F5F3EF" stroke="#23201F"/><text x="238" y="65" text-anchor="middle" font-family="Unbounded, sans-serif" font-size="14" fill="#23201F">1</text></g>
+            <text class="lbl l1t" x="210" y="106" font-family="Commissioner, sans-serif" font-size="15" fill="#23201F" text-anchor="end">Северное Кольцо, 7</text>
+            <g class="pin p2"><circle cx="112" cy="372" r="17" fill="#7A1620"/><text x="112" y="377" text-anchor="middle" font-family="Unbounded, sans-serif" font-size="14" fill="#fff">2</text></g>
+            <text class="lbl l2t" x="140" y="378" font-family="Commissioner, sans-serif" font-size="15" fill="#23201F">Адем, 3/2</text>
+            <path class="scale" d="M24 413V423M24 418H86M86 413V423" stroke="#23201F" fill="none"/>
+            <text class="lbl" x="94" y="422" font-family="Commissioner, sans-serif" font-size="13" fill="#6F6A65">100 м</text>
+          </svg>
+          <figcaption>Схема по координатам 2ГИС, без улиц. Маршрут — по кнопке у каждого зала.</figcaption>
+        </figure>
+      </div>
+
+      <div class="slot" data-from="a1">
+        <article class="hall">
+          <span class="mark" aria-hidden="true">1</span>
+          <h3>Северное Кольцо, 7</h3>
+          <div class="addr">Бутики 2, 22, 11, 9; ряды 2-3-5-6</div>
+          <div class="rating">5,0<small>в 2ГИС, 169 отзывов</small></div>
+          <dl>
+            <dt>Часы</dt><dd>Вт–Вс 09:00–17:45<br>Пн — выходной</dd>
+            <dt>Телефон</dt><dd><a class="link" href="tel:+77788888160">+7 778 888 81 60</a></dd>
+            <dt>Оплата</dt><dd>Наличные, банковский перевод, перевод с карты, QR-код</dd>
+          </dl>
+          <div class="acts">
+            <a class="btn btn-solid wa" data-phone="77788888160" data-salon="зал на Северном Кольце, 7" href="https://wa.me/77788888160">Записаться в WhatsApp</a>
+            <a class="link" href="https://2gis.kz/almaty/firm/70000001035152532" target="_blank" rel="noopener">Маршрут в 2ГИС</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="slot" data-from="a2">
+        <article class="hall">
+          <span class="mark" aria-hidden="true" style="background:var(--velvet);border-color:var(--velvet);color:#fff">2</span>
+          <h3>«Адем», Северное Кольцо, 3/2</h3>
+          <div class="addr">3 этаж, бутик 55</div>
+          <div class="rating">4,9<small>в 2ГИС, 41 отзыв</small></div>
+          <dl>
+            <dt>Часы</dt><dd>Вт–Вс 09:00–18:00<br>Пн — выходной</dd>
+            <dt>Телефон</dt><dd><a class="link" href="tel:+77788888190">+7 778 888 81 90</a></dd>
+            <dt>Оплата</dt><dd>Карта, наличные, банковский перевод, перевод с карты</dd>
+          </dl>
+          <div class="acts">
+            <a class="btn btn-solid wa" data-phone="77788888190" data-salon="зал «Адем», Северное Кольцо, 3/2" href="https://wa.me/77788888190">Записаться в WhatsApp</a>
+            <a class="link" href="https://2gis.kz/almaty/firm/70000001035152525" target="_blank" rel="noopener">Маршрут в 2ГИС</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- B2B -->
+  <section class="b2b" id="b2b" aria-labelledby="b2b-title">
+    <div class="wrap">
+      <div class="box">
+        <h2 id="b2b-title">Для салонов: платья оптом</h2>
+        <p>Ademy-ai продаёт свадебные и национальные платья оптом. Напишите, из какого вы города и что ищете, — пришлют условия и ассортимент.</p>
+        <a class="btn btn-line wa-b2b" href="https://wa.me/77788888160">Обсудить опт в WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL -->
+  <section class="final" aria-labelledby="final-title">
+    <div class="wrap">
+      <div>
+        <h2 id="final-title" data-lines>Приходите на примерку на Северное Кольцо</h2>
+        <p>Вторник — воскресенье с 09:00. Напишите заранее: подберут время и платья под ваш образ.</p>
+      </div>
+      <div class="row">
+        <a class="btn btn-solid wa" data-phone="77788888160" data-salon="зал на Северном Кольце, 7" href="https://wa.me/77788888160">Записаться на примерку</a>
+        <a class="btn btn-line" href="https://instagram.com/ademy_ai" target="_blank" rel="noopener">Instagram @ademy_ai</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="y">2026</span> Ademy-ai, свадебный салон. Алматы, шоссе Северное Кольцо.</div>
+    <div>Концепт сайта. Фото и видео — из Instagram @ademy_ai.</div>
+  </div>
+</footer>
+
+<a class="btn btn-solid sticky-cta wa" data-phone="77788888160" data-salon="зал на Северном Кольце, 7" href="https://wa.me/77788888160">Записаться на примерку</a>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/SplitText.min.js"></script>
+<script src="vendor/DrawSVGPlugin.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script>
+(() => {
+  /* ---------- content wiring (works without motion) ---------- */
+  document.querySelectorAll("a.wa").forEach(a => {
+    const msg = "Здравствуйте! Пишу с сайта. Хочу записаться на примерку (" + a.dataset.salon + "). Дата свадьбы: ";
+    a.href = "https://wa.me/" + a.dataset.phone + "?text=" + encodeURIComponent(msg);
+    a.target = "_blank"; a.rel = "noopener";
+  });
+  document.querySelectorAll("a.wa-b2b").forEach(a => {
+    a.href = "https://wa.me/77788888160?text=" + encodeURIComponent("Здравствуйте! Пишу с сайта. Мы салон, интересует опт свадебных и национальных платьев. Город: ");
+    a.target = "_blank"; a.rel = "noopener";
+  });
+  const NOW = new Date().getFullYear();
+  document.getElementById("y").textContent = NOW;
+  document.getElementById("cYear").textContent = NOW;
+
+  const root = document.documentElement;
+  const RM = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const hdr = document.getElementById("hdr");
+
+  /* sticky CTA: hide while the hero CTA or the final block is on screen */
+  const sticky = document.querySelector(".sticky-cta");
+  if ("IntersectionObserver" in window) {
+    const seen = new Set();
+    const io = new IntersectionObserver(es => {
+      es.forEach(e => e.isIntersecting ? seen.add(e.target) : seen.delete(e.target));
+      sticky.classList.toggle("away", seen.size > 0);
+    }, { threshold: 0.15 });
+    io.observe(document.getElementById("hero-cta"));
+    io.observe(document.querySelector(".final"));
+  }
+
+  /* videos: play only when actually rendered and visible */
+  const vids = [...document.querySelectorAll("video")];
+  const tryPlay = v => { if (RM || !v.offsetParent) return; v.preload = "auto"; const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+  if ("IntersectionObserver" in window) {
+    const vio = new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? tryPlay(e.target) : e.target.pause()), { threshold: 0.01 });
+    vids.forEach(v => vio.observe(v));
+  }
+  document.addEventListener("visibilitychange", () => { if (!document.hidden) vids.forEach(v => { const r = v.getBoundingClientRect(); if (r.bottom > 0 && r.top < innerHeight) tryPlay(v); }); });
+
+  if (!window.gsap || !window.ScrollTrigger) return;
+  if (RM) { vids.forEach(v => v.pause()); return; }
+  root.classList.add("js");
+
+  gsap.registerPlugin(ScrollTrigger, SplitText, DrawSVGPlugin);
+  const $ = s => document.querySelector(s);
+  const $$ = s => [...document.querySelectorAll(s)];
+  const cYear = $("#cYear"), cArea = $("#cArea");
+  const setMeter = p => {
+    p = Math.min(1, Math.max(0, p));
+    cYear.textContent = Math.round(2004 + (NOW - 2004) * p);
+    cArea.textContent = Math.round(500 * p);
+  };
+  setMeter(0);
+
+  const mm = gsap.matchMedia();
+
+  /* ================= DESKTOP ================= */
+  mm.add("(min-width: 900px)", () => {
+    const lenis = new Lenis({ lerp: 0.085, smoothWheel: true, wheelMultiplier: 0.9, anchors: { offset: -70 } });
+    lenis.on("scroll", ScrollTrigger.update);
+    const raf = t => lenis.raf(t * 1000);
+    gsap.ticker.add(raf);
+    gsap.ticker.lagSmoothing(0);
+
+    /* --- signature 1: walkthrough of 500 m² --- */
+    const lens = $("#lens"), stage = $("#stage");
+    const G = () => {
+      const W = lens.offsetWidth, H = lens.offsetHeight;
+      // close-up: ~1.3 source px per css px around the hip lace, never smaller than the viewport
+      const s1 = Math.max(2.2 * 1600 / W, innerWidth / W * 1.15, innerHeight / H * 1.6);
+      return { W, H, s1, fx: 0.47, fy: 0.6 };
+    };
+    // intro: shutter slit opens on the close-up (JS-only "preloader")
+    gsap.fromTo(stage, { clipPath: "inset(49.6% 0% 49.6% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 1.25, ease: "power4.inOut", delay: 0.15, clearProps: "clipPath" });
+    gsap.from([".walk-copy", ".cue", ".meter"], { autoAlpha: 0, y: 24, duration: 0.9, stagger: 0.12, ease: "power3.out", delay: 1.0 });
+
+    const tl = gsap.timeline({
+      defaults: { ease: "none" },
+      scrollTrigger: {
+        trigger: stage, start: "top top", end: "+=270%", pin: true, scrub: 1, anticipatePin: 1, invalidateOnRefresh: true,
+        onUpdate: self => {
+          hdr.classList.toggle("on-light", self.progress > 0.66);
+        },
+        onLeave: () => hdr.classList.add("solid"),
+        onEnterBack: () => hdr.classList.remove("solid")
+      },
+      onUpdate: () => setMeter(tl.time() / 2.45)
+    });
+    tl.set(".scrim", { opacity: 1 }, 0)
+      .fromTo(lens, {
+        scale: () => G().s1,
+        x: () => { const g = G(); return -(g.fx - 0.5) * g.W * g.s1; },
+        y: () => { const g = G(); return -(g.fy - 0.5) * g.H * g.s1; }
+      }, { scale: 1, x: 0, y: 0, duration: 1, ease: "power1.inOut" }, 0)
+      .to(".scrim", { opacity: 0, duration: 0.5 }, 0.45)
+      .to(".cue", { autoAlpha: 0, duration: 0.2 }, 0.05)
+      .fromTo(".walk-side", { autoAlpha: 0, y: 36 }, { autoAlpha: 1, y: 0, duration: 0.35 }, 0.72)
+      // hold on the whole dress, then step back into the hall
+      .to(lens, { scale: 0.56, y: 0, duration: 1, ease: "power1.inOut" }, 1.35)
+      .to([".walk-copy", ".walk-side"], { autoAlpha: 0, y: -28, duration: 0.35, stagger: 0.05 }, 1.35)
+      .to(stage, { backgroundColor: "#E7E4DF", color: "#23201F", duration: 0.55 }, 1.6)
+      .to(lens, { "--edge": 1, duration: 0.3 }, 2.0)
+      .fromTo(".railline", { scaleX: 0 }, { scaleX: 1, duration: 0.5 }, 1.75)
+      .fromTo(".floor", { scaleX: 0 }, { scaleX: 1, duration: 0.6 }, 1.85)
+      .fromTo(".wf .ph", { clipPath: "inset(0% 0% 100% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.45, stagger: 0.07 }, 1.9)
+      .fromTo(".wf", { y: -18 }, { y: 0, duration: 0.45, stagger: 0.07 }, 1.9)
+      .fromTo([".wf .wire", ".cwire"], { scaleY: 0 }, { scaleY: 1, duration: 0.25, stagger: 0.04 }, 2.1)
+      .fromTo([".wf figcaption", ".cplate"], { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.25, stagger: 0.04 }, 2.2)
+      .fromTo(".hall-copy", { autoAlpha: 0, y: 18 }, { autoAlpha: 1, y: 0, duration: 0.3 }, 2.2)
+      .to({}, { duration: 0.35 }, 2.5);
+
+    /* --- support: velocity-tilted plates on drifting rails --- */
+    $$(".rail").forEach(rail => {
+      const track = rail.querySelector(".track");
+      const dir = +rail.dataset.dir;
+      const span = () => Math.max(0, track.scrollWidth - (innerWidth - 2 * parseFloat(getComputedStyle(rail).paddingLeft)));
+      gsap.fromTo(track, { x: () => dir < 0 ? 0 : -span() }, {
+        x: () => dir < 0 ? -span() : 0, ease: "none",
+        scrollTrigger: { trigger: rail, start: "top bottom", end: "bottom top", scrub: 0.8, invalidateOnRefresh: true }
+      });
+      const plates = rail.querySelectorAll(".plate");
+      const setR = gsap.quickTo(plates, "rotation", { duration: 0.7, ease: "power3.out" });
+      const setY = gsap.quickTo(plates, "y", { duration: 0.7, ease: "power3.out" });
+      let idle;
+      ScrollTrigger.create({
+        trigger: rail, start: "top bottom", end: "bottom top",
+        onUpdate: self => {
+          const v = gsap.utils.clamp(-3.5, 3.5, self.getVelocity() / 420 * dir);
+          setR(v); setY(Math.abs(v) * 1.6);
+          clearTimeout(idle); idle = setTimeout(() => { setR(0); setY(0); }, 140);
+        }
+      });
+      gsap.from(rail.querySelectorAll(".ph"), { clipPath: "inset(100% 0% 0% 0%)", duration: 1.1, ease: "power4.out", stagger: 0.08, scrollTrigger: { trigger: rail, start: "top 85%", once: true } });
+    });
+
+    /* --- signature 2: the plan is drawn, cards leave their markers --- */
+    const scene = $("#planScene");
+    const ptl = gsap.timeline({
+      defaults: { ease: "none" },
+      scrollTrigger: { trigger: "#halls", start: "top top", end: "+=160%", pin: true, scrub: 1, anticipatePin: 1, invalidateOnRefresh: true }
+    });
+    const delta = slot => {
+      const a = scene.querySelector(".anchor." + slot.dataset.from).getBoundingClientRect();
+      const s = slot.getBoundingClientRect();
+      return { x: a.left + a.width / 2 - (s.left + s.width / 2), y: a.top + a.height / 2 - (s.top + s.height / 2) };
+    };
+    ptl.from(".plan .sheet", { drawSVG: "0%", duration: 0.6 }, 0)
+      .from(".plan .grid-l path", { drawSVG: "0%", duration: 0.5, stagger: 0.025 }, 0.1)
+      .from(".plan .north path", { drawSVG: "0%", duration: 0.3 }, 0.45)
+      .to(".plan .north path", { fill: "#23201F", duration: 0.15 }, 0.75)
+      .from(".plan .north text", { autoAlpha: 0, duration: 0.15 }, 0.7)
+      .from(".plan .scale", { drawSVG: "0%", duration: 0.2 }, 0.6)
+      .from(".plan .p1", { y: -46, autoAlpha: 0, duration: 0.25, ease: "power3.out" }, 0.8)
+      .from(".plan .p2", { y: -46, autoAlpha: 0, duration: 0.25, ease: "power3.out" }, 0.92)
+      .from(".plan .link-l", { drawSVG: "100% 100%", duration: 0.35 }, 1.05)
+      .from([".plan .lbl", ".plan .dist"], { autoAlpha: 0, duration: 0.2, stagger: 0.05 }, 1.25);
+    $$(".slot").forEach((slot, i) => {
+      const card = slot.querySelector(".hall");
+      ptl.fromTo(card, { x: () => delta(slot).x, y: () => delta(slot).y, scale: 0.08, autoAlpha: 0 },
+        { x: 0, y: 0, scale: 1, autoAlpha: 1, duration: 0.6, ease: "power2.out" }, 1.4 + i * 0.35);
+    });
+    ptl.to({}, { duration: 0.3 });
+
+    return () => { gsap.ticker.remove(raf); lenis.destroy(); hdr.classList.remove("on-light", "solid"); };
+  });
+
+  /* ================= MOBILE ================= */
+  mm.add("(max-width: 899px)", () => {
+    const img = $("#lens img");
+    gsap.fromTo(img, { scale: 2.6 }, {
+      scale: 1, ease: "none",
+      scrollTrigger: { trigger: ".walk", start: "top top", end: "+=75%", scrub: 0.6, onUpdate: s => setMeter(s.progress) }
+    });
+    gsap.from([".walk-copy", ".walk-side"], { autoAlpha: 0, y: 20, duration: 0.8, stagger: 0.12, ease: "power3.out", delay: 0.2 });
+    // plan draws as it scrolls through (no pin)
+    gsap.timeline({ defaults: { ease: "none" }, scrollTrigger: { trigger: ".plan", start: "top 85%", end: "bottom 50%", scrub: 0.6 } })
+      .from(".plan .sheet", { drawSVG: "0%", duration: 0.5 }, 0)
+      .from(".plan .grid-l path", { drawSVG: "0%", duration: 0.4, stagger: 0.02 }, 0.05)
+      .from(".plan .p1", { y: -40, autoAlpha: 0, duration: 0.2 }, 0.6)
+      .from(".plan .p2", { y: -40, autoAlpha: 0, duration: 0.2 }, 0.7)
+      .from(".plan .link-l", { drawSVG: "100% 100%", duration: 0.3 }, 0.8);
+    $$(".hall").forEach(c => gsap.from(c, { y: 40, autoAlpha: 0, duration: 0.9, ease: "power3.out", scrollTrigger: { trigger: c, start: "top 88%", once: true } }));
+    return () => {};
+  });
+
+  /* ================= both: masked line reveals ================= */
+  $$("[data-lines]").forEach(h => {
+    SplitText.create(h, {
+      type: "lines", mask: "lines", autoSplit: true,
+      onSplit: self => gsap.from(self.lines, { yPercent: 105, duration: 0.95, stagger: 0.1, ease: "power4.out", scrollTrigger: { trigger: h, start: "top 86%", once: true } })
+    });
+  });
+  gsap.from("[data-rows] > div", { y: 26, autoAlpha: 0, duration: 0.8, stagger: 0.08, ease: "power3.out", scrollTrigger: { trigger: "[data-rows]", start: "top 82%", once: true } });
+  $$(".bride a").forEach((a, i) => gsap.from(a, { clipPath: "inset(0% 0% 100% 0%)", duration: 1.15, delay: i * 0.08, ease: "power4.out", scrollTrigger: { trigger: ".brides .grid", start: "top 80%", once: true } }));
+
+  const refresh = () => ScrollTrigger.refresh();
+  addEventListener("load", refresh);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
+})();
+</script>
+</body>
+</html>
