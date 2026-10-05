@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cinderella Bridal — свадебный салон в Астане с 2013 года</title>
+<meta name="description" content="Cinderella Bridal, Астана: прокат и продажа свадебных платьев, эксклюзив Maxima Bridal. С 2013 года. Примерка по записи, Акмешит 19/1.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Cinderella Bridal — платья для самых любимых">
+<meta property="og:image" content="video/poster.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ClothingStore","name":"Cinderella Bridal","foundingDate":"2013",
+"address":{"@type":"PostalAddress","streetAddress":"улица Акмешит, 19/1, НП 3","addressLocality":"Астана","addressCountry":"KZ"},
+"geo":{"@type":"GeoCoordinates","latitude":51.096477,"longitude":71.414808},
+"telephone":"+77057434376","openingHours":"Mo-Su 12:00-20:00",
+"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"173"},
+"sameAs":["https://instagram.com/cinderella_bridal"]}
+</script>
+<style>
+:root{
+  --black:#0B0A09; --ink:#141211; --white:#FFFFFF; --paper:#EDEBE7; --grey:#8E8984; --line:rgb(255 255 255 / .16);
+  --walnut:#7A4E33; --walnut-soft:#B58C6E;
+  --display:"Forum","Times New Roman",serif; --text:"Jost",system-ui,sans-serif;
+  --pad:clamp(20px,4vw,64px);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--black)}
+body{background:var(--black);color:var(--white);font:300 17px/1.6 var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--walnut-soft);outline-offset:3px}
+.wrap{max-width:1440px;margin:0 auto;padding:0 var(--pad)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 30px;border-radius:999px;
+  font:400 15px/1 var(--text);letter-spacing:.02em;text-decoration:none;transition:background .3s,color .3s,border-color .3s;cursor:pointer}
+.btn-light{background:var(--white);color:var(--ink)}
+.btn-light:hover{background:var(--paper)}
+.btn-line{border:1px solid rgb(255 255 255 / .55);color:var(--white)}
+.btn-line:hover{background:var(--white);color:var(--ink)}
+.btn-dark{background:var(--ink);color:var(--white)}
+.btn-dark:hover{background:var(--walnut)}
+.link{text-decoration:none;border-bottom:1px solid rgb(255 255 255 / .35);padding-bottom:2px}
+.link:hover{border-color:var(--white)}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:40;mix-blend-mode:difference;pointer-events:none}
+header.solid{mix-blend-mode:normal;background:rgb(11 10 9 / .88);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);pointer-events:auto}
+header{transition:background .35s}
+@media (max-width:899px){.nav{height:62px}}
+.nav{display:flex;justify-content:space-between;align-items:center;height:76px}
+.logo{font:400 26px/1 var(--display);letter-spacing:.02em;text-decoration:none;pointer-events:auto;color:#fff}
+.nav-r{display:flex;gap:28px;font-size:14px;letter-spacing:.04em;pointer-events:auto}
+.nav-r a{text-decoration:none;color:#fff}
+
+/* preloader */
+.preloader{position:fixed;inset:0;z-index:100;background:var(--black);display:grid;place-items:center}
+.preloader__in{width:min(280px,60vw);text-align:center}
+.preloader__name{font:400 34px/1 var(--display);margin-bottom:22px}
+.preloader__track{height:1px;background:rgb(255 255 255 / .15)}
+.preloader__bar{height:1px;background:var(--white);transform:scaleX(0);transform-origin:left}
+
+/* HERO — black & white film becomes colour */
+.hero{position:relative;height:100vh;height:100svh;overflow:hidden;background:var(--black)}
+.hero__media{position:absolute;inset:0;will-change:clip-path}
+.hero__media video,.hero__media img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;filter:grayscale(1) contrast(1.05)}
+.hero__shade{position:absolute;inset:0;background:linear-gradient(180deg,rgb(0 0 0 / .0) 45%,rgb(0 0 0 / .6));opacity:0;pointer-events:none}
+.hero__side{position:absolute;top:50%;transform:translateY(-50%);z-index:2}
+.hero__side--l{left:var(--pad);max-width:22vw}
+.hero__side--r{right:var(--pad);max-width:30vw;text-align:right}
+.since{font:400 15px/1.5 var(--text);letter-spacing:.06em;color:var(--grey)}
+.since b{display:block;font:400 clamp(44px,5vw,84px)/1 var(--display);letter-spacing:0;color:var(--white);margin-bottom:10px}
+.hero h1{font:400 clamp(44px,5.2vw,92px)/1 var(--display);letter-spacing:-.01em}
+.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 .ln>span{display:inline-block}
+.hero__sub{margin-top:22px;color:var(--grey);font-size:15px;line-height:1.55}
+.hero__card{position:absolute;left:var(--pad);right:var(--pad);bottom:clamp(28px,6vh,64px);z-index:3;display:flex;justify-content:space-between;align-items:flex-end;gap:32px;opacity:0;visibility:hidden}
+.hero__card h2{font:400 clamp(40px,5.4vw,96px)/1 var(--display);max-width:12ch}
+.hero__card .acts{display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end}
+.hero__cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:3;font-size:12px;letter-spacing:.2em;color:var(--grey);text-transform:uppercase}
+
+/* INTRO — words light up with scroll */
+.intro{padding:clamp(120px,18vh,220px) 0;background:var(--black)}
+.intro p{font:400 clamp(30px,3.6vw,60px)/1.18 var(--display);max-width:22ch}
+.intro .w{opacity:.16;transition:none}
+.no-motion .intro .w{opacity:1}
+.intro__meta{margin-top:56px;display:flex;flex-wrap:wrap;gap:12px 40px;color:var(--grey);font-size:15px}
+.intro__meta b{color:var(--white);font-weight:400}
+
+/* BRIDES — horizontal film strip, B&W → colour at centre */
+.brides{position:relative;background:var(--black);overflow:hidden}
+.brides__head{padding:0 var(--pad);display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:40px}
+.brides__head h2{font:400 clamp(40px,5vw,84px)/1 var(--display)}
+.brides__head p{color:var(--grey);max-width:34ch;font-size:15px}
+.brides__pin{height:100vh;height:100svh;display:flex;flex-direction:column;justify-content:center}
+.track{display:flex;gap:28px;padding:0 var(--pad);width:max-content;will-change:transform}
+.frame{width:clamp(260px,24vw,380px);flex:none}
+.frame a{text-decoration:none;display:block}
+.frame .ph{overflow:hidden;border-radius:3px;aspect-ratio:3/4;background:#1b1918}
+.frame img{width:100%;height:100%;object-fit:cover;filter:grayscale(1);will-change:filter}
+.frame figcaption{display:flex;justify-content:space-between;margin-top:14px;font-size:14px;color:var(--grey)}
+.frame figcaption b{font:400 24px/1 var(--display);color:var(--white)}
+.no-motion .frame img{filter:none}
+
+/* STACK — sticky cards */
+.stack{background:var(--paper);color:var(--ink);padding:clamp(100px,14vh,160px) 0 clamp(80px,10vh,120px)}
+.stack__head{display:grid;grid-template-columns:7fr 5fr;gap:32px;margin-bottom:56px;align-items:end}
+.stack__head h2{font:400 clamp(40px,5vw,84px)/1 var(--display)}
+.stack__head p{color:#5b5652}
+.cards{position:relative}
+.card{position:sticky;top:12vh;height:76vh;min-height:520px;margin-bottom:6vh;background:var(--white);border-radius:6px;overflow:hidden;
+  display:grid;grid-template-columns:1.05fr 1fr;box-shadow:0 30px 60px -30px rgb(0 0 0 / .35);transform-origin:center top}
+.card:last-child{margin-bottom:0}
+.card__img{overflow:hidden}
+.card__img img{width:100%;height:100%;object-fit:cover}
+.card__txt{padding:clamp(28px,4vw,64px);display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.card__num{font:400 15px/1 var(--text);letter-spacing:.08em;color:#8a847f}
+.card h3{font:400 clamp(36px,3.8vw,64px)/1.02 var(--display);margin:14px 0 18px}
+.card p{color:#4f4a46;max-width:38ch}
+.card .tags{display:flex;flex-wrap:wrap;gap:8px}
+.card .tags span{border:1px solid #d6d1cb;border-radius:999px;padding:6px 14px;font-size:13px}
+
+/* SINCE 2013 */
+.heritage{position:relative;background:var(--black);padding:clamp(120px,16vh,200px) 0;overflow:hidden}
+.heritage__year{position:absolute;left:-2vw;top:50%;transform:translateY(-50%);font:400 clamp(180px,34vw,560px)/.8 var(--display);
+  color:transparent;-webkit-text-stroke:1px rgb(255 255 255 / .16);white-space:nowrap;pointer-events:none}
+.heritage__grid{position:relative;display:grid;grid-template-columns:5fr 6fr;gap:clamp(32px,6vw,110px);align-items:center}
+.heritage__ph{overflow:hidden;border-radius:3px;aspect-ratio:9/13}
+.heritage__ph img{width:100%;height:116%;object-fit:cover;object-position:50% 20%}
+.heritage h2{font:400 clamp(40px,4.6vw,78px)/1.02 var(--display);margin-bottom:26px}
+.heritage p{color:#b9b3ad;max-width:44ch;margin-bottom:16px}
+.proof{display:flex;gap:40px;flex-wrap:wrap;margin-top:40px;padding-top:28px;border-top:1px solid var(--line)}
+.proof div{font-size:14px;color:var(--grey)}
+.proof b{display:block;font:400 34px/1.1 var(--display);color:var(--white)}
+
+/* VISIT */
+.visit{background:var(--black);padding:clamp(100px,14vh,160px) 0 140px;border-top:1px solid var(--line)}
+.visit__grid{display:grid;grid-template-columns:7fr 5fr;gap:clamp(32px,6vw,100px);align-items:end}
+.visit h2{font:400 clamp(52px,7.6vw,140px)/.95 var(--display)}
+.facts{border-top:1px solid var(--line)}
+.fact{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);font-size:16px}
+.fact dt{color:var(--grey);font-size:14px}
+.visit .acts{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+footer{background:var(--black);border-top:1px solid var(--line);padding:28px 0 110px;color:var(--grey);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* header CTA pill — always visible (practice: one goal, CTA everywhere) */
+.nav-r a.nav-cta{border:1px solid #fff;border-radius:999px;padding:9px 18px}
+
+/* STEPS — how the fitting goes */
+.steps{background:var(--black);padding:clamp(110px,15vh,180px) 0;border-top:1px solid var(--line)}
+.steps__head{display:grid;grid-template-columns:7fr 5fr;gap:32px;align-items:end;margin-bottom:64px}
+.steps__head h2{font:400 clamp(40px,5vw,84px)/1 var(--display)}
+.steps__head p{color:var(--grey)}
+.steps__list{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line)}
+.step{padding:34px 28px 10px 0;position:relative}
+.step + .step{padding-left:28px;border-left:1px solid var(--line)}
+.step__n{font:400 64px/1 var(--display);color:transparent;-webkit-text-stroke:1px rgb(255 255 255 / .45)}
+.step h3{font:400 28px/1.1 var(--display);margin:26px 0 12px}
+.step p{color:#b9b3ad;font-size:15px}
+.steps__line{height:1px;background:var(--white);transform:scaleX(0);transform-origin:left;margin-top:-1px}
+
+/* BOOK — visit type + mini form → composed WhatsApp message */
+.book{background:var(--paper);color:var(--ink);padding:clamp(100px,14vh,160px) 0}
+.book__grid{display:grid;grid-template-columns:5fr 7fr;gap:clamp(32px,6vw,110px);align-items:start}
+.book h2{font:400 clamp(44px,5.6vw,96px)/.98 var(--display);margin-bottom:24px}
+.book__lead{color:#5b5652;max-width:36ch;margin-bottom:34px}
+.know{border-top:1px solid #d6d1cb}
+.know li{list-style:none;display:grid;grid-template-columns:28px 1fr;gap:10px;padding:14px 0;border-bottom:1px solid #d6d1cb;font-size:15px;color:#3d3936}
+.know li::before{content:"—";color:var(--walnut)}
+.know small{display:block;color:#8a847f;font-size:12.5px;margin-top:2px}
+.form{background:var(--white);border-radius:6px;padding:clamp(24px,3.4vw,48px);box-shadow:0 30px 60px -36px rgb(0 0 0 / .35)}
+.fld{border:0;margin:0 0 26px}
+.fld legend,.fld label.lbl{display:block;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#8a847f;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip input{position:absolute;opacity:0;pointer-events:none}
+.chip span{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid #d6d1cb;border-radius:999px;font-size:15px;cursor:pointer;transition:background .2s,border-color .2s,color .2s}
+.chip span:hover{border-color:var(--ink)}
+.chip input:checked + span{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip input:focus-visible + span{outline:2px solid var(--walnut);outline-offset:2px}
+.chip span small{opacity:.6;margin-left:6px;font-size:12px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.inp{width:100%;min-height:50px;border:1px solid #d6d1cb;border-radius:4px;padding:0 14px;font:400 16px var(--text);color:var(--ink);background:#fff}
+.inp:focus{outline:2px solid var(--walnut);outline-offset:1px;border-color:transparent}
+.preview{background:#e7f6e9;border-radius:10px 10px 10px 2px;padding:14px 16px;font-size:14.5px;line-height:1.5;color:#1d3b23;white-space:pre-line;margin:6px 0 22px;position:relative}
+.preview::before{content:"Сообщение в WhatsApp";display:block;font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:#4c7a55;margin-bottom:6px}
+.form .btn-dark{width:100%;min-height:58px;font-size:16px}
+.form__alt{margin-top:14px;font-size:14px;color:#6b6560;text-align:center}
+.form__alt a{color:var(--ink)}
+
+/* reviews link in heritage */
+.proof a{color:inherit}
+
+.sticky-cta{display:none}
+
+/* ---------- mobile ---------- */
+@media (max-width:899px){
+  .nav-r a:not(.nav-cta){display:none}
+  .hero__side--l{display:none}
+  .hero__side--r{top:auto;bottom:120px;left:var(--pad);right:var(--pad);transform:none;max-width:none;text-align:left}
+  .hero__shade{opacity:1;background:linear-gradient(180deg,rgb(0 0 0 / .15) 0%,rgb(0 0 0 / 0) 30%,rgb(0 0 0 / .78) 100%)}
+  .hero__sub{color:#ECE7E2}
+  .hero h1{font-size:clamp(44px,13vw,64px)}
+  .hero__card,.hero__cue{display:none}
+  .intro p{font-size:clamp(28px,8vw,40px)}
+  .brides{padding:100px 0 40px}
+  .brides__pin{height:auto}
+  .brides__head{flex-direction:column;align-items:flex-start}
+  .track{width:auto;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:12px}
+  .frame{width:72vw;scroll-snap-align:center}
+  .stack__head,.heritage__grid,.visit__grid{grid-template-columns:1fr}
+  .card{grid-template-columns:1fr;grid-template-rows:55% 45%;height:82vh;min-height:0;top:8vh}
+  .card__txt{padding:22px}
+  .card h3{font-size:34px;margin:8px 0 10px}
+  .card p{font-size:15px}
+  .heritage__year{font-size:52vw;top:18%}
+  .fact{grid-template-columns:1fr;gap:2px}
+  .nav-r a.nav-cta{padding:8px 14px;font-size:13px}
+  .steps__head,.book__grid{grid-template-columns:1fr}
+  .steps__list{grid-template-columns:1fr}
+  .step,.step + .step{padding:26px 0 22px;border-left:0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:64px 1fr;gap:0 14px}
+  .step__n{font-size:44px;grid-row:span 2}
+  .step h3{margin:2px 0 6px;font-size:25px}
+  .steps__line{display:none}
+  .row2{grid-template-columns:1fr}
+  .book{padding-bottom:120px}
+  .sticky-cta{display:flex;position:fixed;left:12px;right:12px;bottom:12px;z-index:50;box-shadow:0 12px 30px rgb(0 0 0 / .45)}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero__media video,.frame img{filter:none}
+  .intro .w{opacity:1}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">Cinderella</a>
+    <nav class="nav-r" aria-label="Разделы">
+      <a href="#brides">Невесты</a>
+      <a href="#choose">Платья</a>
+      <a href="#how">Как проходит примерка</a>
+      <a href="#visit">Адрес</a>
+      <a class="nav-cta" href="#book">Записаться</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- 1. HERO: black & white → colour -->
+  <section class="hero" data-hero aria-labelledby="h1">
+    <div class="hero__media" data-hero-media>
+      <video data-hero-video autoplay muted loop playsinline preload="auto" poster="video/poster.jpg" aria-hidden="true">
+        <source src="video/hero.webm" type="video/webm">
+        <source src="video/hero.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero__shade" data-hero-shade></div>
+
+    <div class="hero__side hero__side--l" data-hero-side="l">
+      <p class="since"><b>Since 2013</b>and with love.<br>Luxury bridal store, Астана</p>
+    </div>
+    <div class="hero__side hero__side--r" data-hero-side="r">
+      <h1 id="h1"><span class="ln"><span>Платья</span></span><span class="ln"><span>для самых</span></span><span class="ln"><span>любимых</span></span></h1>
+      <p class="hero__sub">Прокат и продажа. Эксклюзив Maxima Bridal.<br>Примерка по записи.</p>
+    </div>
+
+    <div class="hero__card" data-hero-card>
+      <h2>Ваш выход начинается здесь</h2>
+      <div class="acts">
+        <a class="btn btn-light" href="#book">Записаться на примерку</a>
+        <a class="btn btn-line" href="#how">Как проходит примерка</a>
+      </div>
+    </div>
+    <div class="hero__cue" data-hero-cue>Листайте</div>
+  </section>
+
+  <!-- 2. INTRO: words light up -->
+  <section class="intro" aria-label="О салоне">
+    <div class="wrap">
+      <p data-scrub-words>С 2013 года Cinderella одевает невест Астаны. Платья для самых любимых: в прокат и навсегда, эксклюзивные коллекции Maxima Bridal и примерка, на которой всё внимание — только вам.</p>
+      <div class="intro__meta">
+        <span><b>5,0</b> в 2ГИС, <a class="link" href="https://2gis.kz/astana/firm/70000001018112998/tab/reviews" target="_blank" rel="noopener">173 отзыва</a></span>
+        <span><b>27,2 тыс.</b> подписчиков в Instagram</span>
+        <span><b>Ежедневно</b> 12:00–20:00, по записи</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. BRIDES: film strip -->
+  <section class="brides" id="brides" data-brides aria-labelledby="br-h">
+    <div class="brides__pin" data-brides-pin>
+      <div class="brides__head">
+        <h2 id="br-h">Наши невесты</h2>
+        <p>Настоящие невесты Cinderella из публикаций салона — не модели. Нажмите на кадр, чтобы открыть пост.</p>
+      </div>
+      <div class="track" data-track>
+        <figure class="frame"><a href="https://www.instagram.com/p/DeEyplpCIzF/" target="_blank" rel="noopener"><div class="ph"><img src="img/04.webp" alt="Невеста Динара в пышном платье со шлейфом" loading="lazy"></div><figcaption><b>Динара</b><span>студия</span></figcaption></a></figure>
+        <figure class="frame"><a href="https://www.instagram.com/p/DeClHgCCIq1/" target="_blank" rel="noopener"><div class="ph"><img src="img/05.webp" alt="Невеста Айгерим на мосту в саду" loading="lazy"></div><figcaption><b>Айгерим</b><span>сад</span></figcaption></a></figure>
+        <figure class="frame"><a href="https://www.instagram.com/p/Dd4AdW-CDZm/" target="_blank" rel="noopener"><div class="ph"><img src="img/06.webp" alt="Невеста Гулайым в платье-футляре с открытыми плечами" loading="lazy"></div><figcaption><b>Гулайым</b><span>утро невесты</span></figcaption></a></figure>
+        <figure class="frame"><a href="https://www.instagram.com/p/Dd1tddDEfOZ/" target="_blank" rel="noopener"><div class="ph"><img src="img/07.webp" alt="Невеста Алина с женихом" loading="lazy"></div><figcaption><b>Алина</b><span>Cinderella × Maxima</span></figcaption></a></figure>
+        <figure class="frame"><a href="https://www.instagram.com/p/DceC_H5iAAO/" target="_blank" rel="noopener"><div class="ph"><img src="img/09.webp" alt="Жанель с женихом у свадебного торта" loading="lazy"></div><figcaption><b>Жанель</b><span>торжество</span></figcaption></a></figure>
+        <figure class="frame"><a href="https://www.instagram.com/p/DcY1sjWiPnW/" target="_blank" rel="noopener"><div class="ph"><img src="img/10.webp" alt="Айжан и жених идут, держась за руки" loading="lazy"></div><figcaption><b>Айжан</b><span>первый выход</span></figcaption></a></figure>
+        <figure class="frame"><a href="https://www.instagram.com/p/Dbi2Ky9iK4r/" target="_blank" rel="noopener"><div class="ph"><img src="img/11.webp" alt="Невеста Арайлым в платье с открытыми плечами и фате" loading="lazy"></div><figcaption><b>Арайлым</b><span>фата</span></figcaption></a></figure>
+        <figure class="frame"><a href="https://www.instagram.com/p/DbgU1YSCPVY/" target="_blank" rel="noopener"><div class="ph"><img src="img/12.webp" alt="Жанна и Бекет на фоне свадебной надписи" loading="lazy"></div><figcaption><b>Жанна</b><span>Beket &amp; Zhanna</span></figcaption></a></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3b. HOW THE FITTING GOES -->
+  <section class="steps" id="how" aria-labelledby="how-h">
+    <div class="wrap">
+      <div class="steps__head">
+        <h2 id="how-h" data-reveal>Как проходит<br>примерка</h2>
+        <p data-reveal>Салон работает только по записи — так в зале нет очереди, а всё время примерки посвящено вам.</p>
+      </div>
+      <ol class="steps__list" data-steps>
+        <li class="step"><div class="step__n">01</div><h3>Заявка за минуту</h3><p>Выберите формат визита и дату свадьбы в форме ниже — сообщение для WhatsApp соберётся само.</p></li>
+        <li class="step"><div class="step__n">02</div><h3>Подтверждение</h3><p>Салон ответит в WhatsApp и предложит время. Ежедневно с 12:00 до 20:00.</p></li>
+        <li class="step"><div class="step__n">03</div><h3>Примерка</h3><p>Силуэт, коллекции Maxima Bridal, фата — образ собирают целиком за одну встречу.</p></li>
+        <li class="step"><div class="step__n">04</div><h3>Ваше «да»</h3><p>Прокат на вашу дату или покупка навсегда. Оплата картой, наличными, через банк или QR.</p></li>
+      </ol>
+      <div class="steps__line" data-steps-line aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- 4. STACK: how to choose -->
+  <section class="stack" id="choose" aria-labelledby="ch-h">
+    <div class="wrap">
+      <div class="stack__head">
+        <h2 id="ch-h">Как выбирают платье в Cinderella</h2>
+        <p>Три решения, которые невеста принимает на примерке. Модели и наличие на вашу дату подскажут в салоне.</p>
+      </div>
+      <div class="cards" data-stack>
+        <article class="card" data-card>
+          <div class="card__img"><img src="img/04.webp" alt="Пышное платье со шлейфом в студии" loading="lazy"></div>
+          <div class="card__txt">
+            <div><div class="card__num">Решение первое</div><h3>Прокат или покупка</h3><p>Любое платье можно взять на ваш день или оставить себе навсегда. Стоимость и свободные даты — в WhatsApp.</p></div>
+            <div class="tags"><span>Прокат</span><span>Продажа</span><span>Sale</span></div>
+          </div>
+        </article>
+        <article class="card" data-card>
+          <div class="card__img"><img src="img/06.webp" alt="Платье силуэта «рыбка»" loading="lazy"></div>
+          <div class="card__txt">
+            <div><div class="card__num">Решение второе</div><h3>А-силуэт или «рыбка»</h3><p>В салоне коллекции разделены по силуэтам — так быстрее найти своё. Новинки сезона — в Instagram в разделе New.</p></div>
+            <div class="tags"><span>А-силуэт</span><span>Рыбка</span><span>New</span></div>
+          </div>
+        </article>
+        <article class="card" data-card>
+          <div class="card__img"><img src="img/11.webp" alt="Невеста в длинной фате" loading="lazy"></div>
+          <div class="card__txt">
+            <div><div class="card__num">Решение третье</div><h3>Фата и образ целиком</h3><p>Фату подбирают вместе с платьем на той же примерке, чтобы образ сложился сразу.</p></div>
+            <div class="tags"><span>Veil</span><span>Примерка по записи</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. HERITAGE -->
+  <section class="heritage" aria-labelledby="he-h">
+    <div class="heritage__year" data-year aria-hidden="true">2013</div>
+    <div class="wrap heritage__grid">
+      <figure class="heritage__ph"><img data-parallax src="img/01.webp" alt="Невеста в фате, чёрно-белый кадр" loading="lazy"></figure>
+      <div>
+        <h2 id="he-h" data-reveal>Since 2013<br>and with love</h2>
+        <p data-reveal>Салон открылся 1 марта 2013 года. С тех пор каждую невесту здесь провожают словами «Спасибо за выбор» — а потом с любовью публикуют её свадебные кадры.</p>
+        <p data-reveal>В салоне — эксклюзивные платья Maxima Bridal: их можно примерить в Астане, а не выбирать по фотографиям.</p>
+        <div class="proof" data-reveal>
+          <div><b>5,0</b>рейтинг в 2ГИС</div>
+          <div><a href="https://2gis.kz/astana/firm/70000001018112998/tab/reviews" target="_blank" rel="noopener"><b>173</b></a>отзыва невест в 2ГИС</div>
+          <div><b>27,2 тыс.</b>в Instagram</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5b. BOOK: visit type + mini form -->
+  <section class="book" id="book" aria-labelledby="bk-h">
+    <div class="wrap book__grid">
+      <div>
+        <h2 id="bk-h" data-reveal>Запись<br>на примерку</h2>
+        <p class="book__lead" data-reveal>Три вопроса — и салон заранее знает, какие платья подготовить к вашему визиту.</p>
+        <ul class="know" data-reveal aria-label="Полезно знать">
+          <li><div>Только по предварительной записи<small>ежедневно 12:00–20:00</small></div></li>
+          <li><div>Прокат и продажа<small>в том числе платья из раздела Sale</small></div></li>
+          <li><div>Эксклюзив Maxima Bridal в Астане<small>примерять вживую, а не по фото</small></div></li>
+          <li><div>Совет: возьмите туфли нужной высоты<small>так длину платья видно сразу</small></div></li>
+        </ul>
+      </div>
+
+      <form class="form" data-book novalidate aria-label="Запись на примерку">
+        <fieldset class="fld">
+          <legend>Формат визита</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="type" value="первая примерка свадебного платья" checked><span>Первая примерка</span></label>
+            <label class="chip"><input type="radio" name="type" value="примерка платья в прокат"><span>Прокат</span></label>
+            <label class="chip"><input type="radio" name="type" value="примерка платья для покупки"><span>Покупка</span></label>
+            <label class="chip"><input type="radio" name="type" value="платья из раздела Sale"><span>Sale</span></label>
+            <label class="chip"><input type="radio" name="type" value="подбор фаты и аксессуаров"><span>Фата и аксессуары</span></label>
+            <label class="chip"><input type="radio" name="type" value="повторная примерка (я уже была в салоне)"><span>Повторная</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="fld">
+          <legend>Какой силуэт нравится</legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="sil" value="А-силуэт"><span>А-силуэт</span></label>
+            <label class="chip"><input type="checkbox" name="sil" value="рыбка"><span>Рыбка</span></label>
+            <label class="chip"><input type="checkbox" name="sil" value="пышное"><span>Пышное</span></label>
+            <label class="chip"><input type="checkbox" name="sil" value="пока не знаю"><span>Пока не знаю</span></label>
+          </div>
+        </fieldset>
+        <div class="row2">
+          <div class="fld"><label class="lbl" for="f-date">Дата свадьбы</label><input class="inp" id="f-date" name="date" type="date"></div>
+          <div class="fld"><label class="lbl" for="f-visit">Когда удобно прийти</label><input class="inp" id="f-visit" name="visit" type="text" placeholder="например, в субботу после 15:00"></div>
+        </div>
+        <div class="row2">
+          <fieldset class="fld">
+            <legend>Сколько человек придёт с вами</legend>
+            <div class="chips">
+              <label class="chip"><input type="radio" name="guests" value="приду одна"><span>Одна</span></label>
+              <label class="chip"><input type="radio" name="guests" value="со мной 1 человек" checked><span>+1</span></label>
+              <label class="chip"><input type="radio" name="guests" value="со мной 2 человека"><span>+2</span></label>
+              <label class="chip"><input type="radio" name="guests" value="со мной 3 человека и больше"><span>+3</span></label>
+            </div>
+          </fieldset>
+          <div class="fld"><label class="lbl" for="f-name">Ваше имя</label><input class="inp" id="f-name" name="name" type="text" autocomplete="given-name" placeholder="Айгерим"></div>
+        </div>
+        <div class="preview" data-preview aria-live="polite"></div>
+        <a class="btn btn-dark" data-send href="#" target="_blank" rel="noopener">Отправить в WhatsApp</a>
+        <p class="form__alt">или просто <a class="wa" href="#visit" data-msg="Здравствуйте! Пишу с сайта. Хочу записаться на примерку свадебного платья.">написать без анкеты</a> · <a href="tel:+77057434376">позвонить</a></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- 6. VISIT -->
+  <section class="visit" id="visit" aria-labelledby="vi-h">
+    <div class="wrap visit__grid">
+      <div>
+        <h2 id="vi-h" data-reveal>Ждём вас<br>на примерку</h2>
+        <div class="acts" data-reveal>
+          <a class="btn btn-light" href="#book">Записаться на примерку</a>
+          <a class="btn btn-line" href="https://2gis.kz/astana/firm/70000001018112998" target="_blank" rel="noopener">Маршрут в 2ГИС</a>
+        </div>
+      </div>
+      <dl class="facts" data-reveal>
+        <div class="fact"><dt>Адрес</dt><dd>Астана, улица Акмешит, 19/1, НП 3</dd></div>
+        <div class="fact"><dt>Часы</dt><dd>Ежедневно 12:00–20:00, по предварительной записи</dd></div>
+        <div class="fact"><dt>Телефон</dt><dd><a class="link" href="tel:+77057434376">+7 705 743 43 76</a></dd></div>
+        <div class="fact"><dt>Оплата</dt><dd>Карта, наличные, банк, QR, электронный кошелёк</dd></div>
+        <div class="fact"><dt>Instagram</dt><dd><a class="link" href="https://instagram.com/cinderella_bridal" target="_blank" rel="noopener">@cinderella_bridal</a></dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="y">2026</span> Cinderella Bridal, Астана</span>
+    <span>Концепт сайта. Фото и видео — из Instagram @cinderella_bridal.</span>
+  </div>
+</footer>
+
+<a class="btn btn-light sticky-cta" href="#book" data-sticky>Записаться на примерку</a>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script>
+(() => {
+  // WhatsApp links
+  document.querySelectorAll("a.wa").forEach(a => {
+    a.href = "https://wa.me/77057434376?text=" + encodeURIComponent(a.dataset.msg || "Здравствуйте! Пишу с сайта.");
+    a.target = "_blank"; a.rel = "noopener";
+  });
+  document.getElementById("y").textContent = new Date().getFullYear();
+
+  // booking form → composed WhatsApp message
+  const form = document.querySelector("[data-book]");
+  if (form) {
+    const prev = form.querySelector("[data-preview]"), send = form.querySelector("[data-send]");
+    const fmt = v => { if (!v) return ""; const [y, m, d] = v.split("-"); return `${d}.${m}.${y}`; };
+    const build = () => {
+      const f = new FormData(form);
+      const sil = f.getAll("sil");
+      const name = (f.get("name") || "").trim(), visit = (f.get("visit") || "").trim();
+      const lines = [`Здравствуйте! Пишу с сайта. Хочу записаться: ${f.get("type")}.`];
+      lines.push(`Дата свадьбы: ${fmt(f.get("date")) || "пока не определилась"}.`);
+      if (sil.length) lines.push(`Нравится: ${sil.join(", ")}.`);
+      if (f.get("guests")) lines.push(`На примерку ${f.get("guests")}.`);
+      if (visit) lines.push(`Удобно прийти: ${visit}.`);
+      if (name) lines.push(`Меня зовут ${name}.`);
+      const msg = lines.join("\n");
+      prev.textContent = msg;
+      send.href = "https://wa.me/77057434376?text=" + encodeURIComponent(msg);
+    };
+    form.addEventListener("input", build); form.addEventListener("change", build); build();
+    form.addEventListener("submit", e => { e.preventDefault(); send.click(); });
+  }
+  // header gets a solid bar once past the first screen (no text-on-text overlaps)
+  const hdr = document.querySelector("header");
+  const onS = () => hdr.classList.toggle("solid", scrollY > innerHeight * 0.85);
+  addEventListener("scroll", onS, { passive: true }); onS();
+  // sticky CTA hides while the form is on screen
+  const sticky = document.querySelector("[data-sticky]"), bookSec = document.getElementById("book");
+  if (sticky && bookSec) new IntersectionObserver(es => es.forEach(e => sticky.style.visibility = e.isIntersecting ? "hidden" : "visible")).observe(bookSec);
+
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const video = document.querySelector("[data-hero-video]");
+  if (reduce || !window.gsap) {
+    document.documentElement.classList.add("no-motion");
+    if (video) { video.removeAttribute("autoplay"); video.pause(); }
+    return;
+  }
+  gsap.registerPlugin(ScrollTrigger);
+
+  // split intro words (scroll-linked highlight)
+  document.querySelectorAll("[data-scrub-words]").forEach(el => {
+    const text = el.textContent.trim();
+    el.setAttribute("aria-label", text);
+    el.innerHTML = text.split(/\s+/).map(w => `<span class="w" aria-hidden="true">${w}</span>`).join(" ");
+  });
+
+  // smooth scroll — desktop pointer only (touch keeps native scroll)
+  let lenis = null;
+  if (matchMedia("(pointer: fine)").matches && window.Lenis) {
+    lenis = new Lenis({ lerp: 0.08, smoothWheel: true, wheelMultiplier: 0.9, anchors: true });
+    lenis.on("scroll", ScrollTrigger.update);
+    gsap.ticker.add(t => lenis.raf(t * 1000));
+    gsap.ticker.lagSmoothing(0);
+  }
+
+  // preloader (built by JS so the page is readable without it)
+  const pre = document.createElement("div");
+  pre.className = "preloader";
+  pre.innerHTML = '<div class="preloader__in"><div class="preloader__name">Cinderella</div><div class="preloader__track"><div class="preloader__bar"></div></div></div>';
+  document.body.appendChild(pre);
+  const intro = gsap.timeline({ defaults: { ease: "power3.out" } });
+  intro.to(".preloader__bar", { scaleX: 1, duration: 1.0 })
+       .to(pre, { yPercent: -100, duration: 0.9, ease: "power4.inOut", onComplete: () => pre.remove() }, "+=0.1")
+       .from(".hero h1 .ln > span", { yPercent: 110, duration: 1, stagger: 0.1, ease: "power4.out" }, "-=0.35")
+       .from(".since, .hero__sub", { autoAlpha: 0, y: 20, duration: 0.9, stagger: 0.1 }, "-=0.7");
+  setTimeout(() => { if (pre.isConnected) { pre.remove(); intro.progress(1); } }, 4000);
+
+  // keep the hero film playing (autoplay can be paused by the browser)
+  if (video) {
+    const play = () => { const pr = video.play(); if (pr && pr.catch) pr.catch(() => {}); };
+    play();
+    document.addEventListener("visibilitychange", () => { if (!document.hidden) play(); });
+    new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? play() : video.pause())).observe(video);
+  }
+
+  const mm = gsap.matchMedia();
+
+  // ---------- DESKTOP ----------
+  mm.add("(min-width: 900px)", () => {
+    const media = document.querySelector("[data-hero-media]");
+    const frame = () => {               // portrait 9:16 window in the centre
+      const h = innerHeight * 0.78, w = h * 9 / 16;
+      const top = (innerHeight - h) / 2, side = (innerWidth - w) / 2;
+      return `inset(${top}px ${side}px ${top}px ${side}px)`;
+    };
+    const tl = gsap.timeline({
+      scrollTrigger: { trigger: "[data-hero]", start: "top top", end: "+=140%", scrub: 1, pin: true, anticipatePin: 1, invalidateOnRefresh: true }
+    });
+    tl.fromTo(media, { clipPath: frame }, { clipPath: "inset(0px 0px 0px 0px)", ease: "none", duration: 1, immediateRender: true }, 0)
+      .fromTo(video, { filter: "grayscale(1) contrast(1.05)", scale: 1.12 }, { filter: "grayscale(0) contrast(1)", scale: 1, ease: "none", duration: 1 }, 0)
+      .to("[data-hero-side='l']", { xPercent: -40, autoAlpha: 0, ease: "none", duration: .45 }, 0)
+      .to("[data-hero-side='r']", { xPercent: 30, autoAlpha: 0, ease: "none", duration: .45 }, 0)
+      .to("[data-hero-cue]", { autoAlpha: 0, duration: .2 }, 0)
+      .to("[data-hero-shade]", { opacity: 1, ease: "none", duration: .4 }, .6)
+      .fromTo("[data-hero-card]", { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, ease: "none", duration: .35 }, .7);
+
+    // film strip: pinned horizontal, B&W → colour near the centre
+    const track = document.querySelector("[data-track]");
+    const strip = gsap.to(track, {
+      x: () => -(track.scrollWidth - innerWidth),
+      ease: "none",
+      scrollTrigger: { trigger: "[data-brides-pin]", start: "top top", end: () => "+=" + (track.scrollWidth - innerWidth), scrub: 1, pin: true, anticipatePin: 1, invalidateOnRefresh: true }
+    });
+    gsap.utils.toArray(".frame img").forEach(img => {
+      gsap.fromTo(img, { filter: "grayscale(1)" }, {
+        filter: "grayscale(0)", ease: "none",
+        scrollTrigger: { trigger: img, containerAnimation: strip, start: "left 85%", end: "left 45%", scrub: true }
+      });
+    });
+
+    // sticky card stack: earlier cards recede
+    const cards = gsap.utils.toArray("[data-card]");
+    cards.forEach((card, i) => {
+      const next = cards[i + 1]; if (!next) return;
+      gsap.to(card, { scale: 0.92 + i * 0.015, autoAlpha: 0.6, ease: "none",
+        scrollTrigger: { trigger: next, start: "top 85%", end: "top 12%", scrub: true, invalidateOnRefresh: true } });
+    });
+  });
+
+  // ---------- MOBILE ----------
+  mm.add("(max-width: 899px)", () => {
+    // B&W → colour after the intro, a single moment
+    gsap.fromTo(video, { filter: "grayscale(1)" }, { filter: "grayscale(0)", duration: 1.6, delay: 1.9, ease: "power2.inOut" });
+    const cards = gsap.utils.toArray("[data-card]");
+    cards.forEach((card, i) => {
+      const next = cards[i + 1]; if (!next) return;
+      gsap.to(card, { scale: 0.94, autoAlpha: 0.7, ease: "none",
+        scrollTrigger: { trigger: next, start: "top 90%", end: "top 10%", scrub: true } });
+    });
+  });
+
+  // ---------- BOTH ----------
+  const words = gsap.utils.toArray("[data-scrub-words] .w");
+  gsap.to(words, { opacity: 1, ease: "none", stagger: 0.1,
+    scrollTrigger: { trigger: "[data-scrub-words]", start: "top 80%", end: "bottom 45%", scrub: 1 } });
+
+  gsap.to("[data-year]", { xPercent: -18, ease: "none",
+    scrollTrigger: { trigger: ".heritage", start: "top bottom", end: "bottom top", scrub: 1.2 } });
+  gsap.to("[data-parallax]", { yPercent: -12, ease: "none",
+    scrollTrigger: { trigger: ".heritage", start: "top bottom", end: "bottom top", scrub: 1 } });
+
+  gsap.utils.toArray("[data-reveal]").forEach(el => {
+    gsap.from(el, { y: 36, autoAlpha: 0, duration: 1, ease: "power4.out",
+      scrollTrigger: { trigger: el, start: "top 86%", once: true } });
+  });
+
+  // steps: line draws, numbers rise one by one
+  gsap.to("[data-steps-line]", { scaleX: 1, ease: "none",
+    scrollTrigger: { trigger: "[data-steps]", start: "top 80%", end: "bottom 60%", scrub: 1 } });
+  gsap.from("[data-steps] .step", { y: 40, autoAlpha: 0, duration: 1, stagger: 0.14, ease: "power4.out",
+    scrollTrigger: { trigger: "[data-steps]", start: "top 82%", once: true } });
+  gsap.from(".form", { y: 50, autoAlpha: 0, duration: 1.1, ease: "power4.out",
+    scrollTrigger: { trigger: ".form", start: "top 88%", once: true } });
+
+  addEventListener("load", () => ScrollTrigger.refresh());
+  if (document.fonts) document.fonts.ready.then(() => ScrollTrigger.refresh());
+})();
+</script>
+</body>
+</html>
