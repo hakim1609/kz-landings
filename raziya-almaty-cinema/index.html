@@ -74,6 +74,14 @@ a{color:inherit}
 .top.solid{background:rgb(250 247 242 / .94);color:var(--ink);box-shadow:0 1px 0 var(--line);backdrop-filter:blur(6px)}
 .top.solid .btn{background:var(--ink);color:var(--ivory);border-color:var(--ink)}
 
+.top-r{display:flex;align-items:center;gap:12px}
+.lang{display:inline-flex;align-items:center;gap:2px;border:1px solid rgb(205 181 142 / .6);border-radius:999px;padding:3px;font:600 12px/1 var(--text);letter-spacing:.06em}
+.lang button{border:0;background:none;font:inherit;color:inherit;opacity:.78;padding:7px 9px;border-radius:999px;cursor:pointer}
+.lang button:hover{opacity:1}
+.lang button[aria-pressed="true"]{background:var(--brass);color:#fff;opacity:1}
+.top:not(.solid) .lang{background:rgb(30 25 22 / .35);backdrop-filter:blur(4px)}
+.top.solid .lang{border-color:var(--line)}
+
 /* ---------- HERO: doors ---------- */
 .doors{position:relative;background:var(--walnut-2)}
 .door-stage{position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden}
@@ -320,6 +328,9 @@ footer .wrap{display:grid;gap:6px}
 @media (max-width:420px){
   .btn{padding:0 20px}
   .top .btn{padding:0 16px}
+  .top .wrap{gap:12px}
+  .top-r{gap:8px}
+  .lang button{padding:7px 8px}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
@@ -337,7 +348,10 @@ footer .wrap{display:grid;gap:6px}
       <a href="#brides">Невесты</a>
       <a href="#salons">Салоны</a>
     </nav>
-    <a class="btn" href="#salons">Записаться</a>
+    <div class="top-r">
+      <div class="lang" role="group" aria-label="Тіл / Язык"><button type="button" data-lang="kk" aria-pressed="false" lang="kk">ҚАЗ</button><button type="button" data-lang="ru" aria-pressed="true" lang="ru">РУС</button></div>
+      <a class="btn" href="#salons">Записаться</a>
+    </div>
   </div>
 </header>
 
@@ -618,6 +632,38 @@ footer .wrap{display:grid;gap:6px}
 
 <a class="btn btn-ink sticky-cta away" id="stickyCta" href="#salons">Записаться на примерку</a>
 
+<script>
+/* i18n: runs BEFORE gsap (text is final before animations measure it); switching = localStorage + reload. Priority: ?lang= → saved choice → browser language */
+(() => {
+  const T = {"Подарки": "Сыйлықтар", "Платья": "Көйлектер", "Невесты": "Қалыңдықтар", "Салоны": "Салондар", "Записаться": "Жазылу", "Raziya — наверх": "Raziya — жоғарыға", "Разделы": "Бөлімдер", "Свадебный салон в Астане, Алматы и Таразе": "Астана, Алматы және Тараздағы той салоны", "Эксклюзивные свадебные платья": "Эксклюзивті үйлену көйлектері", "Записаться на примерку": "Киіп көруге жазылу", "Что в подарок": "Сыйлыққа не кіреді", "Невеста в кружевном платье с фатой в салоне Raziya": "Raziya салонында фата таққан шілтерлі көйлектегі қалыңдық", "Четыре салона, у каждого свой WhatsApp": "Төрт салон, әрқайсысының өз WhatsApp нөмірі бар", "2 салона": "2 салон", "Видео: @raziyasalon": "Бейне: @raziyasalon", "Листайте, двери откроются": "Төмен айналдырыңыз — есік ашылады", "19 лет": "19 жыл", "на рынке свадебной моды": "той сәні нарығында", "счастливых невест": "бақытты қалыңдық", "4 салона": "4 салон", "в Астане, Алматы и Таразе": "Астана, Алматы және Таразда", "85 тыс.": "85 мың", "подписчиков в Instagram": "Instagram-дағы жазылушы", "При покупке или прокате платья — в подарок": "Көйлекті сатып алғанда немесе жалға алғанда — сыйлыққа", "Семь подарков к платью, которое вы выберете в любом из салонов.": "Кез келген салоннан таңдаған көйлегіңізге қоса жеті сыйлық.", "Туфли": "Туфли", "Фата": "Фата", "Букет": "Гүл шоғы", "Аксессуары для волос": "Шашқа арналған аксессуарлар", "Серьги": "Сырға", "Шубка или куртка": "Ішік немесе күртеше", "Пижама или халат на утро невесты": "Қалыңдық таңына пижама немесе халат", "Бесплатно:": "Тегін:", "примерка, подгонка и глажка": "киіп көру, өлшемге келтіру және үтіктеу", "Выбрать салон для примерки": "Киіп көру үшін салон таңдау", "Купить или взять на прокат": "Сатып алу немесе жалға алу", "Подарки и бесплатная подгонка — в обоих случаях. Цены и наличие на вашу дату подскажет администратор салона.": "Сыйлықтар мен тегін өлшемге келтіру — екі жағдайда да. Бағасын және сіздің күніңізге көйлектің бар-жоғын салон әкімшісі айтып береді.", "Покупка": "Сатып алу", "Эксклюзивные платья, которые остаются с вами. Новые модели каждую неделю — в Instagram салона.": "Өзіңізде қалатын эксклюзивті көйлектер. Жаңа үлгілер апта сайын салонның Instagram парақшасында шығады.", "Каталог в Instagram @raziyasalon": "Instagram-дағы каталог @raziyasalon", "Распродажа платьев в Telegram": "Telegram-да көйлектерді жеңілдікпен сату", "Прокат": "Жалға алу", "Платье на ваш день — без полной стоимости. Отдельный каталог проката в Алматы и Таразе.": "Ерекше күніңізге көйлек — толық бағасын төлемей-ақ. Алматы мен Таразда жалға беру каталогы бөлек.", "Каталог проката @prokat_raziyasalon": "Жалға беру каталогы @prokat_raziyasalon", "Новые платья в салоне": "Салондағы жаңа көйлектер", "Из последних публикаций салона. Нажмите на фото, чтобы посмотреть видео в Instagram.": "Салонның соңғы жарияланымдарынан. Instagram-дағы бейнені көру үшін фотоны басыңыз.", "Платье Brilliant с кружевом и длинной фатой": "Шілтерлі, ұзын фаталы Brilliant көйлегі", "Атласное платье А-силуэта с длинными рукавами в шоуруме": "Шоурумдағы ұзын жеңді, А-силуэтті атлас көйлек", "Кружевное платье с перчатками и воротником-стойкой": "Қолғабы мен тік жағасы бар шілтерлі көйлек", "Пышное кружевное платье с длинным шлейфом": "Ұзын шлейфті үлпілдек шілтерлі көйлек", "Атлас": "Атлас", "Длинный рукав, шлейф": "Ұзын жең, шлейф", "Кружево": "Шілтер", "Бальный силуэт": "Бальдық силуэт", "Кружево и шлейф": "Шілтер және шлейф", "Все 3 700 публикаций в Instagram": "Instagram-дағы барлық 3 700 жарияланым", "Консультант помогает невесте на примерке в шоуруме Raziya": "Raziya шоурумында кеңесші қалыңдыққа көйлек таңдауға көмектесіп жатыр", "Как проходит примерка": "Киіп көру қалай өтеді", "Только по предварительной записи — в примерочной будете вы и ваши близкие.": "Тек алдын ала жазылу бойынша — киіну бөлмесінде тек сіз және жақындарыңыз боласыз.", "Выберите салон и напишите": "Салонды таңдап, жазыңыз", "В WhatsApp или в Direct. Скажите дату свадьбы — подберём время с 11:00 до 20:00.": "WhatsApp немесе Direct арқылы. Той күнін айтыңыз — 11:00 мен 20:00 аралығында ыңғайлы уақыт табамыз.", "Приходите на бесплатную примерку": "Тегін киіп көруге келіңіз", "Примерите модели на покупку и на прокат, консультант поможет с образом.": "Сатып алуға да, жалға алуға да арналған үлгілерді киіп көресіз, кеңесші образ таңдауға көмектеседі.", "Подгоним и погладим платье": "Көйлекті өлшеміңізге келтіріп, үтіктейміз", "Бесплатно. Забираете платье вместе с туфлями, фатой, букетом и остальными подарками.": "Тегін. Көйлекті туфли, фата, гүл шоғы және басқа да сыйлықтармен бірге алып кетесіз.", "30 000 невест за 19 лет. Вот некоторые из них": "19 жылда 30 000 қалыңдық. Солардың бірнешеуі", "Пары, которые выбрали платье в Raziya. Истории — в Instagram салона.": "Көйлекті Raziya салонынан таңдаған жұптар. Олардың оқиғалары — салонның Instagram парақшасында.", "Невеста Нурай с супругом": "Қалыңдық Нурай жұбайымен", "Нурай": "Нурай", "Чингиз и Жанслу в свадебный день": "Чингиз бен Жанслу той күнінде", "Чингиз и Жанслу": "Чингиз бен Жанслу", "Медет и Айымгуль в парке": "Медет пен Айымгуль саябақта", "Медет и Айымгуль": "Медет пен Айымгуль", "Куаныш и Индира": "Куаныш пен Индира", "Выберите салон для примерки": "Киіп көру үшін салонды таңдаңыз", "У каждого салона свой WhatsApp — запись сразу к администратору нужного города.": "Әр салонның өз WhatsApp нөмірі бар — керекті қаладағы әкімшіге бірден жазыласыз.", "Салон в Астане, Мангилик Ел": "Астанадағы салон, Мәңгілік Ел", "Салон в Астане, Жирентаева": "Астанадағы салон, Жирентаев көшесі", "Салон в Алматы": "Алматыдағы салон", "Салон в Таразе": "Тараздағы салон", "Астана, первый салон": "Астана, бірінші салон", "Астана, второй салон": "Астана, екінші салон", "Мангилик Ел, 40, офис 32": "Мәңгілік Ел даңғылы, 40, 32-кеңсе", "рядом с Luna Coffee": "Luna Coffee жанында", "161 отзыв в 2ГИС": "2ГИС-те 161 пікір", "Записаться в WhatsApp": "WhatsApp арқылы жазылу", "Маршрут в 2ГИС": "2ГИС-тегі бағыт", "Примерка платья в салоне Raziya": "Raziya салонында көйлек киіп көру", "Жирентаева, 19": "Жирентаев көшесі, 19", "82 отзыва в 2ГИС": "2ГИС-те 82 пікір", "Консультанты подгоняют кружевной корсет платья по фигуре": "Кеңесшілер көйлектің шілтерлі корсетін денеге қондырып жатыр", "Макатаева, 128": "Мақатаев көшесі, 128", "1 этаж. Здесь же — каталог проката": "1-қабат. Жалға беру каталогы да осында", "344 отзыва в 2ГИС": "2ГИС-те 344 пікір", "Невеста в кружевном платье с фатой у деревянной стены": "Ағаш қабырға жанында фата таққан шілтерлі көйлектегі қалыңдық", "Бектурганова, 14": "Бектұрғанов көшесі, 14", "Покупка и прокат платьев": "Көйлектерді сатып алу және жалға алу", "Пышное кружевное платье со шлейфом": "Шлейфті үлпілдек шілтерлі көйлек", "Ваше платье уже ждёт примерки": "Көйлегіңіз сізді күтіп тұр", "Выбрать салон": "Салон таңдау", "Raziya, свадебный салон. Астана, Алматы, Тараз.": "Raziya той салоны. Астана, Алматы, Тараз.", "Концепт сайта. Фото и видео — из Instagram @raziyasalon.": "Сайт концепті. Фото мен бейне — Instagram @raziyasalon парақшасынан."};
+  const HTML = {".room-copy p": "Сатып алу және жалға алу. <b>Киіп көру, өлшемге келтіру және үтіктеу — тегін</b>, ал туфли, фата мен гүл шоғы — сыйлыққа.", ".hours-in": "Барлық салон күн сайын 11:00–20:00 аралығында алдын ала жазылу бойынша жұмыс істейді. <a class=\"link\" href=\"https://ig.me/m/raziyasalon\" target=\"_blank\" rel=\"noopener\">Direct арқылы</a> да жазылуға болады.", ".hours": "Барлық салон күн сайын 11:00–20:00 аралығында алдын ала жазылу бойынша жұмыс істейді. <a class=\"link\" href=\"https://ig.me/m/raziyasalon\" target=\"_blank\" rel=\"noopener\">Direct арқылы</a> да жазылуға болады."};
+  const SALON = {"Астана, Мангилик Ел 40": "Астана, Мәңгілік Ел 40", "Астана, Жирентаева 19": "Астана, Жирентаев 19", "Алматы, Макатаева 128": "Алматы, Мақатаев 128", "Тараз, Бектурганова 14": "Тараз, Бектұрғанов 14"};
+  const META = {"title": "Raziya — Астана, Алматы және Тараздағы үйлену көйлектері", "description": "Raziya той салоны: 19 жыл, 30 000 қалыңдық. Үйлену көйлектерін сатып алу және жалға алу. Тегін киіп көру, өлшемге келтіру және үтіктеу. Туфли, фата, гүл шоғы мен аксессуарлар — сыйлыққа."};
+  const store = { get(){ try { return localStorage.getItem("lang"); } catch(e) { return null; } }, set(v){ try { localStorage.setItem("lang", v); } catch(e) {} } };
+  const q = new URLSearchParams(location.search).get("lang");
+  const browserKK = (navigator.languages || [navigator.language || ""]).some(l => /^kk\b/i.test(l || ""));
+  const lang = (q === "kk" || q === "ru") ? q : (store.get() || (browserKK ? "kk" : "ru"));
+  document.querySelectorAll("[data-lang]").forEach(b => {
+    b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
+    b.addEventListener("click", () => { if (b.dataset.lang === lang) return; store.set(b.dataset.lang);
+      const u = new URL(location.href); u.searchParams.delete("lang"); location.href = u.pathname + u.search + u.hash; });
+  });
+  if (lang !== "kk") return;
+  document.documentElement.lang = "kk";
+  Object.keys(HTML).forEach(sel => document.querySelectorAll(sel).forEach(el => { el.innerHTML = HTML[sel]; }));
+  const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT), nodes = [];
+  while (w.nextNode()) nodes.push(w.currentNode);
+  nodes.forEach(n => { const k = n.nodeValue.trim(); if (k && T[k] && !n.parentElement.closest("script,style")) n.nodeValue = n.nodeValue.replace(k, T[k]); });
+  document.querySelectorAll("[alt],[aria-label],[title]").forEach(el => ["alt","aria-label","title"].forEach(a => { const v = el.getAttribute(a); if (v && T[v]) el.setAttribute(a, T[v]); }));
+  /* WhatsApp: the main script builds a.wa hrefs via window.RZ_WA when present */
+  window.RZ_WA = salon => "Сәлеметсіз бе! Сайттан жазып отырмын. Үйлену көйлегін киіп көруге жазылғым келеді (" + (SALON[salon] || salon) + "). Той күні: ";
+  window.RZ_FREE = "<span><em>Тағы да тегін</em>киіп көру, өлшемге келтіру және үтіктеу</span>";
+  document.title = META.title;
+  const d = document.querySelector('meta[name="description"]'); if (d) d.content = META.description;
+  document.querySelectorAll('meta[property="og:title"]').forEach(m => { m.content = "Raziya — эксклюзивті үйлену көйлектері"; });
+  document.querySelectorAll('meta[property="og:description"]').forEach(m => { m.content = "Астана, Алматы, Тараз. Тегін өлшемге келтіру, туфли мен аксессуарлар — сыйлыққа."; });
+})();
+</script>
 <script src="vendor/gsap.min.js"></script>
 <script src="vendor/ScrollTrigger.min.js"></script>
 <script src="vendor/lenis.min.js"></script>
@@ -630,7 +676,7 @@ footer .wrap{display:grid;gap:6px}
 
   /* WhatsApp links */
   document.querySelectorAll('a.wa').forEach(a => {
-    const msg = 'Здравствуйте! Пишу с сайта. Хочу записаться на примерку свадебного платья (' + a.dataset.salon + '). Дата свадьбы: ';
+    const msg = window.RZ_WA ? window.RZ_WA(a.dataset.salon) : 'Здравствуйте! Пишу с сайта. Хочу записаться на примерку свадебного платья (' + a.dataset.salon + '). Дата свадьбы: ';
     a.href = 'https://wa.me/' + a.dataset.phone + '?text=' + encodeURIComponent(msg);
     a.target = '_blank'; a.rel = 'noopener';
   });
@@ -707,7 +753,7 @@ footer .wrap{display:grid;gap:6px}
   const stage = document.getElementById('stagebig');
   lis.forEach(li => { const d = document.createElement('div'); d.className = 'big'; const sp = document.createElement('span'); sp.textContent = li.textContent.trim(); d.appendChild(sp); stage.appendChild(d); });
   const fb = document.createElement('div'); fb.className = 'big free-big';
-  fb.innerHTML = '<span><em>И ещё бесплатно</em>примерка, подгонка и глажка</span>';
+  fb.innerHTML = window.RZ_FREE || '<span><em>И ещё бесплатно</em>примерка, подгонка и глажка</span>';
   stage.appendChild(fb);
 
   const mm = gsap.matchMedia();

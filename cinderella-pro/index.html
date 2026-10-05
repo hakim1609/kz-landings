@@ -10,7 +10,7 @@
 <meta property="og:image" content="video/poster.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Forum&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Forum&family=Jost:wght@300;400;500&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ClothingStore","name":"Cinderella Bridal","foundingDate":"2013",
 "address":{"@type":"PostalAddress","streetAddress":"улица Акмешит, 19/1, НП 3","addressLocality":"Астана","addressCountry":"KZ"},
@@ -234,6 +234,17 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   .hero__media video,.frame img{filter:none}
   .intro .w{opacity:1}
 }
+
+/* language switch (ҚАЗ/РУС) — header is mix-blend difference, so white reads on any background */
+.nav-r{align-items:center}
+.lang{display:inline-flex;align-items:center;gap:2px;border:1px solid rgb(255 255 255 / .7);border-radius:999px;padding:3px;font:500 12px/1 var(--text);letter-spacing:.06em;pointer-events:auto}
+.lang button{border:0;background:none;font:inherit;color:#fff;padding:7px 10px;border-radius:999px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:#fff;color:#000}
+/* Kazakh letters (ә ғ қ ң ө ү һ) are missing in Jost → Manrope (cyrillic-ext) for body text in kk */
+html[lang="kk"]{--text:"Manrope",system-ui,sans-serif}
+html[lang="kk"] body{font-weight:300}
+html[lang="kk"] .preview::before{content:"WhatsApp-қа хабарлама"}
+@media (max-width:899px){.nav-r{gap:12px}.lang button{padding:7px 8px}}
 </style>
 </head>
 <body>
@@ -246,6 +257,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
       <a href="#choose">Платья</a>
       <a href="#how">Как проходит примерка</a>
       <a href="#visit">Адрес</a>
+      <div class="lang" role="group" aria-label="Тіл / Язык"><button type="button" data-lang="kk" aria-pressed="false" lang="kk">ҚАЗ</button><button type="button" data-lang="ru" aria-pressed="true" lang="ru">РУС</button></div>
       <a class="nav-cta" href="#book">Записаться</a>
     </nav>
   </div>
@@ -468,6 +480,37 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 
 <a class="btn btn-light sticky-cta" href="#book" data-sticky>Записаться на примерку</a>
 
+<script>
+/* i18n: применяется ДО анимаций (слова intro режутся на span), смена языка = перезагрузка. Приоритет: ?lang= → выбор → язык браузера */
+(() => {
+  const T = {"Невесты": "Қалыңдықтар", "Платья": "Көйлектер", "Как проходит примерка": "Киіп көру қалай өтеді", "Адрес": "Мекенжай", "Записаться": "Жазылу", "Ваш выход начинается здесь": "Сіздің сәтіңіз осы жерден басталады", "Записаться на примерку": "Киіп көруге жазылу", "Наши невесты": "Біздің қалыңдықтар", "Листайте": "Парақтаңыз", "С 2013 года Cinderella одевает невест Астаны. Платья для самых любимых: в прокат и навсегда, эксклюзивные коллекции Maxima Bridal и примерка, на которой всё внимание — только вам.": "2013 жылдан бері Cinderella Астана қалыңдықтарын киіндіріп келеді. Ең сүйікті жандарға арналған көйлектер: жалға да, біржола да, Maxima Bridal эксклюзив коллекциялары және бар назар тек сізге бөлінетін киіп көру.", "в 2ГИС,": "2ГИС-те,", "173 отзыва": "173 пікір", "в 2ГИС, 173 отзыва": "2ГИС-те, 173 пікір", "Настоящие невесты Cinderella из публикаций салона — не модели. Нажмите на кадр, чтобы открыть пост.": "Салон жарияланымдарындағы Cinderella-ның нағыз қалыңдықтары — модельдер емес. Жазбаны ашу үшін кадрды басыңыз.", "Невесты Cinderella из публикаций салона. Нажмите на кадр, чтобы открыть пост.": "Салон жарияланымдарындағы Cinderella қалыңдықтары. Жазбаны ашу үшін кадрды басыңыз.", "студия": "студия", "сад": "бақ", "утро невесты": "қалыңдықтың таңы", "торжество": "салтанат", "первый выход": "алғашқы шығу", "фата": "фата", "Невеста Динара в пышном платье со шлейфом": "Шлейфі бар үлпілдек көйлектегі қалыңдық Динара", "Невеста Айгерим на мосту в саду": "Бақтағы көпірде тұрған қалыңдық Айгерим", "Невеста Гулайым в платье-футляре с открытыми плечами": "Иықтары ашық, тұтас пішілген (футляр) көйлектегі қалыңдық Гулайым", "Невеста Алина с женихом": "Қалыңдық Алина күйеу жігітпен", "Жанель с женихом у свадебного торта": "Жанель күйеу жігітпен үйлену торты жанында", "Айжан и жених идут, держась за руки": "Айжан мен күйеу жігіт қол ұстасып келеді", "Невеста Арайлым в платье с открытыми плечами и фате": "Иықтары ашық көйлек пен фата киген қалыңдық Арайлым", "Жанна и Бекет на фоне свадебной надписи": "Жанна мен Бекет той жазуының алдында", "Салон работает только по записи — так в зале нет очереди, а всё время примерки посвящено вам.": "Салон тек алдын ала жазылу арқылы жұмыс істейді — залда кезек болмайды, ал киіп көрудің бар уақыты тек сізге арналады.", "Заявка за минуту": "Бір минутта өтінім", "Выберите формат визита и дату свадьбы в форме ниже — сообщение для WhatsApp соберётся само.": "Төмендегі формада келу форматы мен той күнін таңдаңыз — WhatsApp-қа хабарлама өзі құрастырылады.", "Подтверждение": "Растау", "Салон ответит в WhatsApp и предложит время. Ежедневно с 12:00 до 20:00.": "Салон WhatsApp-та жауап беріп, уақыт ұсынады. Күн сайын 12:00-ден 20:00-ге дейін.", "Примерка": "Киіп көру", "Силуэт, коллекции Maxima Bridal, фата — образ собирают целиком за одну встречу.": "Силуэт, Maxima Bridal коллекциялары, фата — бүкіл образ бір кездесуде жиналады.", "Ваше «да»": "«Иә» деген сәт", "Прокат на вашу дату или покупка навсегда. Оплата картой, наличными, через банк или QR.": "Той күніңізге жалға алу немесе біржола сатып алу. Төлем картамен, қолма-қол, банк арқылы немесе QR арқылы.", "Как выбирают платье в Cinderella": "Cinderella-да көйлек қалай таңдалады", "Три решения, которые невеста принимает на примерке. Модели и наличие на вашу дату подскажут в салоне.": "Қалыңдық киіп көру кезінде қабылдайтын үш шешім. Үлгілер мен той күніңізге бар-жоғын салонда айтып береді.", "Решение первое": "Бірінші шешім", "Решение второе": "Екінші шешім", "Решение третье": "Үшінші шешім", "Прокат или покупка": "Жалға алу әлде сатып алу", "Любое платье можно взять на ваш день или оставить себе навсегда. Стоимость и свободные даты — в WhatsApp.": "Кез келген көйлекті той күніңізге жалға алуға немесе біржола өзіңізге қалдыруға болады. Бағасы мен бос күндер — WhatsApp-та.", "Прокат": "Жалға алу", "Продажа": "Сату", "А-силуэт или «рыбка»": "А-силуэт әлде «рыбка»", "В салоне коллекции разделены по силуэтам — так быстрее найти своё. Новинки сезона — в Instagram в разделе New.": "Салонда коллекциялар силуэт бойынша бөлінген — өзіңізге лайығын тезірек табасыз. Маусым жаңалықтары — Instagram-дағы New бөлімінде.", "Рыбка": "«Рыбка»", "Фата и образ целиком": "Фата және тұтас образ", "Фату подбирают вместе с платьем на той же примерке, чтобы образ сложился сразу.": "Образ бірден жинақталуы үшін фатаны көйлекпен бірге сол киіп көруде таңдайды.", "Примерка по записи": "Жазылу бойынша киіп көру", "Пышное платье со шлейфом в студии": "Студиядағы шлейфі бар үлпілдек көйлек", "Платье силуэта «рыбка»": "«Рыбка» силуэтті көйлек", "Невеста в длинной фате": "Ұзын фата киген қалыңдық", "Невеста в фате, чёрно-белый кадр": "Фата киген қалыңдық, ақ-қара кадр", "Салон открылся 1 марта 2013 года. С тех пор каждую невесту здесь провожают словами «Спасибо за выбор» — а потом с любовью публикуют её свадебные кадры.": "Салон 2013 жылғы 1 наурызда ашылды. Содан бері мұнда әр қалыңдықты «Таңдауыңызға рақмет» деген сөзбен шығарып салады — кейін оның той кадрларын сүйіспеншілікпен жариялайды.", "В салоне — эксклюзивные платья Maxima Bridal: их можно примерить в Астане, а не выбирать по фотографиям.": "Салонда — Maxima Bridal эксклюзив көйлектері: оларды суреттен таңдамай-ақ, Астанада киіп көруге болады.", "рейтинг в 2ГИС": "2ГИС рейтингі", "отзыва невест в 2ГИС": "қалыңдық пікірі 2ГИС-те", "отзыва невест": "қалыңдық пікірі", "в Instagram": "Instagram-да", "27,2 тыс.": "27,2 мың", "Три вопроса — и салон заранее знает, какие платья подготовить к вашему визиту.": "Үш сұраққа жауап беріңіз — салон сіз келгенге дейін қандай көйлектерді дайындау керегін біледі.", "Полезно знать": "Білген жөн", "Только по предварительной записи": "Тек алдын ала жазылу бойынша", "ежедневно 12:00–20:00": "күн сайын 12:00–20:00", "Прокат и продажа": "Жалға беру және сату", "в том числе платья из раздела Sale": "соның ішінде Sale бөліміндегі көйлектер", "Эксклюзив Maxima Bridal в Астане": "Астанада Maxima Bridal эксклюзиві", "примерять вживую, а не по фото": "суреттен емес, өзіңіз киіп көресіз", "Совет: возьмите туфли нужной высоты": "Кеңес: той күні киетін биіктіктегі туфли ала келіңіз", "так длину платья видно сразу": "сонда көйлектің ұзындығы бірден көрінеді", "Запись на примерку": "Киіп көруге жазылу", "Формат визита": "Келу форматы", "Первая примерка": "Алғашқы киіп көру", "Покупка": "Сатып алу", "Фата и аксессуары": "Фата мен аксессуарлар", "Повторная": "Қайта киіп көру", "Какой силуэт нравится": "Қай силуэт ұнайды", "Пышное": "Үлпілдек", "Пока не знаю": "Әзірге білмеймін", "Дата свадьбы": "Той күні", "Когда удобно прийти": "Қашан келу ыңғайлы", "например, в субботу после 15:00": "мысалы, сенбіде 15:00-ден кейін", "Сколько человек придёт с вами": "Сізбен бірге неше адам келеді", "Одна": "Жалғыз", "Ваше имя": "Атыңыз", "Отправить в WhatsApp": "WhatsApp-қа жіберу", "или просто": "немесе жай ғана", "написать без анкеты": "сауалнамасыз жазу", "позвонить": "қоңырау шалу", "Маршрут в 2ГИС": "2ГИС-те маршрут", "Записаться в WhatsApp": "WhatsApp арқылы жазылу", "Часы": "Жұмыс уақыты", "Телефон": "Телефон", "Оплата": "Төлем", "Астана, улица Акмешит, 19/1, НП 3": "Астана, Ақмешіт көшесі, 19/1, НП 3", "Ежедневно 12:00–20:00, по предварительной записи": "Күн сайын 12:00–20:00, алдын ала жазылу бойынша", "Карта, наличные, банк, QR, электронный кошелёк": "Карта, қолма-қол ақша, банк, QR, электрондық әмиян", "Концепт сайта. Фото и видео — из Instagram @cinderella_bridal.": "Сайт концепті. Фото мен бейне — Instagram @cinderella_bridal парақшасынан.", "Разделы": "Бөлімдер", "О салоне": "Салон туралы"};
+  const HTML = {"#h1": "<span class=\"ln\"><span>Көйлектер</span></span><span class=\"ln\"><span>ең сүйікті</span></span><span class=\"ln\"><span>жандарға</span></span>", ".hero__sub": "Жалға беру және сату. Maxima Bridal эксклюзиві.<br>Киіп көру — алдын ала жазылу бойынша.", ".intro__meta span:nth-child(2)": "Instagram-да <b>27,2 мың</b> жазылушы", ".intro__meta span:nth-child(3)": "<b>Күн сайын</b> 12:00–20:00, жазылу бойынша", "#how-h": "Киіп көру<br>қалай өтеді", "#bk-h": "Киіп көруге<br>жазылу", "#vi-h": "Киіп көруге<br>күтеміз"};
+  const WA = {"Здравствуйте! Пишу с сайта. Хочу записаться на примерку свадебного платья.": "Сәлеметсіз бе! Сайттан жазып отырмын. Үйлену көйлегін киіп көруге жазылғым келеді.", "Здравствуйте! Пишу с сайта. Хочу записаться на примерку свадебного платья. Дата свадьбы: ": "Сәлеметсіз бе! Сайттан жазып отырмын. Үйлену көйлегін киіп көруге жазылғым келеді. Той күні: "};
+  const VAL = {"первая примерка свадебного платья": "үйлену көйлегін алғаш киіп көру", "примерка платья в прокат": "жалға алатын көйлекті киіп көру", "примерка платья для покупки": "сатып алатын көйлекті киіп көру", "платья из раздела Sale": "Sale бөліміндегі көйлектер", "подбор фаты и аксессуаров": "фата мен аксессуарлар таңдау", "повторная примерка (я уже была в салоне)": "қайта киіп көру (салонда бұрын болғанмын)", "рыбка": "«рыбка»", "пышное": "үлпілдек", "пока не знаю": "әзірге білмеймін", "приду одна": "жалғыз келемін", "со мной 1 человек": "менімен бірге 1 адам келеді", "со мной 2 человека": "менімен бірге 2 адам келеді", "со мной 3 человека и больше": "менімен бірге 3 не одан да көп адам келеді"};
+  const META = {"title": "Cinderella Bridal — Астанадағы үйлену көйлектері салоны, 2013 жылдан бері", "description": "Cinderella Bridal, Астана: үйлену көйлектерін жалға беру және сату, Maxima Bridal эксклюзиві. 2013 жылдан бері. Киіп көру — жазылу бойынша, Ақмешіт көшесі 19/1.", "og": "Cinderella Bridal — ең сүйікті жандарға арналған көйлектер"};
+  const store = { get(){ try { return localStorage.getItem("lang"); } catch(e) { return null; } }, set(v){ try { localStorage.setItem("lang", v); } catch(e) {} } };
+  const q = new URLSearchParams(location.search).get("lang");
+  const browserKK = (navigator.languages || [navigator.language || ""]).some(l => /^kk\b/i.test(l || ""));
+  const lang = (q === "kk" || q === "ru") ? q : (store.get() || (browserKK ? "kk" : "ru"));
+  document.querySelectorAll("[data-lang]").forEach(b => {
+    b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
+    b.addEventListener("click", () => { if (b.dataset.lang === lang) return; store.set(b.dataset.lang);
+      const u = new URL(location.href); u.searchParams.delete("lang"); u.searchParams.delete("t"); location.href = u.pathname + u.search + u.hash; });
+  });
+  if (lang !== "kk") return;
+  document.documentElement.lang = "kk";
+  Object.keys(HTML).forEach(sel => { const el = document.querySelector(sel); if (el) el.innerHTML = HTML[sel]; });
+  const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT), nodes = [];
+  while (w.nextNode()) nodes.push(w.currentNode);
+  nodes.forEach(n => { const k = n.nodeValue.trim(); if (k && T[k] && !n.parentElement.closest("script,style")) n.nodeValue = n.nodeValue.replace(k, T[k]); });
+  document.querySelectorAll("[alt],[aria-label],[title],[placeholder]").forEach(el => ["alt","aria-label","title","placeholder"].forEach(a => { const v = el.getAttribute(a); if (v && T[v]) el.setAttribute(a, T[v]); }));
+  document.querySelectorAll("[data-msg]").forEach(el => { if (WA[el.dataset.msg]) el.dataset.msg = WA[el.dataset.msg]; });
+  document.querySelectorAll("form input[value]").forEach(i => { if (VAL[i.value]) i.value = VAL[i.value]; });
+  document.title = META.title;
+  const d = document.querySelector('meta[name="description"]'); if (d) d.content = META.description;
+  const og = document.querySelector('meta[property="og:title"]'); if (og) og.content = META.og;
+})();
+</script>
 <script src="vendor/gsap.min.js"></script>
 <script src="vendor/ScrollTrigger.min.js"></script>
 <script src="vendor/lenis.min.js"></script>
@@ -484,17 +527,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   const form = document.querySelector("[data-book]");
   if (form) {
     const prev = form.querySelector("[data-preview]"), send = form.querySelector("[data-send]");
+    const KK = document.documentElement.lang === "kk";
     const fmt = v => { if (!v) return ""; const [y, m, d] = v.split("-"); return `${d}.${m}.${y}`; };
     const build = () => {
       const f = new FormData(form);
       const sil = f.getAll("sil");
       const name = (f.get("name") || "").trim(), visit = (f.get("visit") || "").trim();
-      const lines = [`Здравствуйте! Пишу с сайта. Хочу записаться: ${f.get("type")}.`];
-      lines.push(`Дата свадьбы: ${fmt(f.get("date")) || "пока не определилась"}.`);
-      if (sil.length) lines.push(`Нравится: ${sil.join(", ")}.`);
-      if (f.get("guests")) lines.push(`На примерку ${f.get("guests")}.`);
-      if (visit) lines.push(`Удобно прийти: ${visit}.`);
-      if (name) lines.push(`Меня зовут ${name}.`);
+      const L = KK ? ["Сәлеметсіз бе! Сайттан жазып отырмын. Жазылғым келеді: ", "Той күні: ", "әлі белгісіз", "Ұнайды: ", "Киіп көруге ", "Келуге ыңғайлы уақыт: ", "Менің атым "]
+                   : ["Здравствуйте! Пишу с сайта. Хочу записаться: ", "Дата свадьбы: ", "пока не определилась", "Нравится: ", "На примерку ", "Удобно прийти: ", "Меня зовут "];
+      const lines = [`${L[0]}${f.get("type")}.`];
+      lines.push(`${L[1]}${fmt(f.get("date")) || L[2]}.`);
+      if (sil.length) lines.push(`${L[3]}${sil.join(", ")}.`);
+      if (f.get("guests")) lines.push(`${L[4]}${f.get("guests")}.`);
+      if (visit) lines.push(`${L[5]}${visit}.`);
+      if (name) lines.push(`${L[6]}${name}.`);
       const msg = lines.join("\n");
       prev.textContent = msg;
       send.href = "https://wa.me/77057434376?text=" + encodeURIComponent(msg);
